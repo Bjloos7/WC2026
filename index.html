@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/bloos/Downloads/worldcup2026_4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WC 2026 Primer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap');
+:root{--bg:#07101e;--bg2:#0d1929;--bg3:#132035;--border:#1a2d44;--text:#dce8f5;--muted:#5a7393;--gold:#f0b429;--gold2:rgba(240,180,41,.13);--blue:#3b82f6;--blue2:rgba(59,130,246,.13)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh}
+.site-header{background:linear-gradient(135deg,#07101e,#0b1c38 60%,#07101e);border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:300}
+.header-top{display:flex;align-items:center;justify-content:space-between;padding:10px 22px;flex-wrap:wrap;gap:8px}
+.site-title{font-family:'Bebas Neue',cursive;font-size:1.8rem;letter-spacing:3px;color:#fff;line-height:1}
+.site-title span{color:var(--gold)}
+.live-pill{background:var(--gold);color:#07101e;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:3px;display:flex;align-items:center;gap:7px}
+.pulse{width:7px;height:7px;background:#e53e3e;border-radius:50%;animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.nav-tabs{display:flex;border-top:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.nav-tab{padding:11px 20px;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;flex-shrink:0}
+.nav-tab:hover{color:var(--text)}
+.nav-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.nav-tab.usa-tab.active{color:#6fa8ff;border-bottom-color:#6fa8ff}
+.page{display:none;padding:20px;max-width:1120px;margin:0 auto}
+.page.active{display:block}
+.eyebrow{font-family:'Roboto Condensed',sans-serif;font-size:.67rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.section-title{font-family:'Bebas Neue',cursive;font-size:2rem;letter-spacing:2px;color:#fff;margin-bottom:16px;line-height:1}
+.divider{border:none;border-top:1px solid var(--border);margin:22px 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr}}
+@media(max-width:1024px){.grid-3{grid-template-columns:1fr 1fr}}
+/* FLAGS */
+.cf{height:15px;border-radius:2px;object-fit:cover;flex-shrink:0;vertical-align:middle;display:inline-block}
+.cf-sm{height:13px;border-radius:1px;object-fit:cover;flex-shrink:0;vertical-align:middle;display:inline-block}
+.cf-lg{height:28px;border-radius:3px;object-fit:cover;flex-shrink:0}
+.cf-xl{height:40px;border-radius:4px;object-fit:cover;flex-shrink:0}
+/* STAT CHIPS */
+.stat-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.stat-chip{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:9px 13px;text-align:center;flex:1;min-width:65px}
+.stat-chip .num{font-family:'Bebas Neue',cursive;font-size:1.75rem;color:var(--gold);line-height:1}
+.stat-chip .lbl{font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+/* MATCH CARDS */
+.mc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:11px 14px;display:flex;align-items:center;gap:10px;transition:border-color .2s,transform .15s}
+.mc:hover{border-color:rgba(240,180,41,.5);transform:translateY(-1px)}
+.mc.usa{border-color:#1e3a5f}.mc.usa:hover{border-color:#6fa8ff}
+.mc.hot{border-color:rgba(240,180,41,.35)}
+.mc-left{flex:1}
+.mbadge{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:2px;display:inline-block;margin-bottom:4px}
+.bh{background:var(--gold2);color:var(--gold);border:1px solid rgba(240,180,41,.25)}
+.bu{background:var(--blue2);color:#6fa8ff;border:1px solid rgba(111,168,255,.2)}
+.bg{background:rgba(90,115,147,.1);color:var(--muted);border:1px solid var(--border)}
+.mteams{display:flex;align-items:center;gap:7px}
+.tn{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.95rem;color:var(--text)}
+.vs{font-family:'Bebas Neue',cursive;font-size:.95rem;color:var(--muted);padding:0 3px}
+.mmeta{text-align:right;min-width:90px}
+.mdate{font-size:.68rem;color:var(--muted);font-weight:600}
+.mtime{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.88rem;color:var(--gold)}
+.mvenue{font-size:.65rem;color:var(--muted);margin-top:1px}
+/* HEADLINES */
+.hl{display:flex;gap:11px;padding:12px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;border-left:3px solid var(--gold);margin-bottom:9px}
+.hln{font-family:'Bebas Neue',cursive;font-size:1.4rem;color:rgba(240,180,41,.22);min-width:26px;line-height:1}
+.hll{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.hlt{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.95rem;color:var(--text);line-height:1.3;margin-bottom:3px}
+.hlb{font-size:.78rem;color:var(--muted);line-height:1.55}
+/* INFO */
+.ib{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:15px}
+.ib h3{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.88rem;color:var(--text);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.ib p,.ib li{font-size:.78rem;color:var(--muted);line-height:1.65}
+.ib ul{padding-left:14px}
+.ib li{margin-bottom:3px}
+/* GROUPS */
+.groups-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+@media(max-width:900px){.groups-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.groups-grid{grid-template-columns:1fr}}
+.gc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.gc.usa-g{border-color:#1e3a5f}
+.gh{background:var(--bg3);padding:7px 11px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.gl{font-family:'Bebas Neue',cursive;font-size:1rem;letter-spacing:2px;color:var(--gold)}
+.usa-g .gl{color:#6fa8ff}
+.gn{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.gt{display:flex;align-items:center;gap:7px;padding:7px 11px;font-size:.82rem;border-bottom:1px solid rgba(26,45,68,.6);cursor:pointer;transition:background .15s}
+.gt:last-child{border-bottom:none}
+.gt:hover{background:rgba(240,180,41,.05)}
+.gt.ur{background:rgba(111,168,255,.03)}
+.gt.ur:hover{background:rgba(111,168,255,.07)}
+.gs{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.66rem;color:var(--muted);min-width:13px}
+.gtn{flex:1;font-weight:500;color:var(--text)}
+.grk{font-size:.66rem;color:var(--muted);font-weight:600}
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:999;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(5px)}
+.modal-overlay.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:12px;max-width:500px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 24px 70px rgba(0,0,0,.7);animation:mIn .2s ease}
+@keyframes mIn{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.mhdr{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 13px;border-bottom:1px solid var(--border);background:var(--bg3);border-radius:12px 12px 0 0}
+.mci{display:flex;align-items:center;gap:12px}
+.mcn{font-family:'Bebas Neue',cursive;font-size:1.65rem;letter-spacing:2px;color:#fff;line-height:1}
+.mcs{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.mclose{background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;padding:4px 8px;border-radius:4px;transition:color .2s}
+.mclose:hover{color:var(--text)}
+.mbody{padding:16px 18px}
+.msec{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.mgame{display:flex;align-items:center;justify-content:space-between;padding:9px 11px;background:var(--bg3);border-radius:6px;margin-bottom:6px;border:1px solid var(--border)}
+.mgt{display:flex;align-items:center;gap:6px;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.88rem;color:var(--text)}
+.mgr{text-align:right}
+.mgd{font-size:.68rem;color:var(--muted);font-weight:600}
+.mgt2{font-size:.8rem;color:var(--gold);font-weight:700}
+.mgv{font-size:.62rem;color:var(--muted)}
+.mstats{display:flex;gap:7px;margin-top:13px;flex-wrap:wrap}
+.ms{flex:1;min-width:75px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:7px 9px;text-align:center}
+.msn{font-family:'Bebas Neue',cursive;font-size:1.35rem;color:var(--gold);line-height:1}
+.msl{font-size:.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+/* SCHEDULE */
+.sb{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.sh{background:var(--bg3);padding:13px 16px;border-bottom:1px solid var(--border)}
+.sh-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.sh-title{font-family:'Bebas Neue',cursive;font-size:1.4rem;letter-spacing:2px;color:#fff}
+.scontrols{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.sbtn{background:var(--bg);border:1px solid var(--border);color:var(--muted);font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:4px;cursor:pointer;transition:all .2s}
+.sbtn:hover,.sbtn.active{background:var(--gold2);border-color:rgba(240,180,41,.4);color:var(--gold)}
+.sbtn.usa-b:hover,.sbtn.usa-b.active{background:var(--blue2);border-color:rgba(111,168,255,.4);color:#6fa8ff}
+.ssrch{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:5px 10px;color:var(--text);font-family:'Inter',sans-serif;font-size:.8rem;width:150px;outline:none}
+.ssrch::placeholder{color:var(--muted)}
+.slist{padding:14px 16px;display:flex;flex-direction:column;gap:7px}
+/* date section headers in schedule */
+.sday{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:6px 0 4px;border-bottom:1px solid var(--border);margin-top:8px}
+.sday:first-child{margin-top:0}
+.sg{background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:10px 12px;display:flex;align-items:center;gap:9px;cursor:pointer;transition:border-color .2s}
+.sg:hover{border-color:rgba(240,180,41,.4)}
+.sg.sg-usa{border-color:#1e3a5f}
+.sg.sg-usa:hover{border-color:#6fa8ff}
+.sg-left{flex:1}
+.sg-match{display:flex;align-items:center;gap:6px;margin-bottom:3px;flex-wrap:wrap}
+.sg-tn{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.9rem;color:var(--text)}
+.sg-vs{font-family:'Bebas Neue',cursive;font-size:.85rem;color:var(--muted)}
+.sg-info{font-size:.68rem;color:var(--muted)}
+.sg-right{text-align:right;min-width:90px;flex-shrink:0}
+.sg-grp{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);background:var(--bg);border:1px solid var(--border);padding:2px 5px;border-radius:2px;margin-bottom:4px;display:inline-block}
+.sg-date{font-size:.68rem;color:var(--muted);font-weight:600}
+.sg-time{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.85rem;color:var(--gold)}
+/* FORMATION */
+.fwrap{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:22px}
+.fhdr{background:var(--bg3);padding:11px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fhdr-title{font-family:'Bebas Neue',cursive;font-size:1.2rem;letter-spacing:2px;color:#fff}
+.fhdr-badge{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:var(--blue2);color:#6fa8ff;border:1px solid rgba(111,168,255,.2);padding:3px 8px;border-radius:3px}
+.pitch{background:linear-gradient(180deg,#1a4a2e,#1e5534 25%,#1a4a2e 50%,#1e5534 75%,#1a4a2e);padding:18px 10px;position:relative;min-height:360px}
+.pitch svg.lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.formation-rows{position:relative;z-index:1;display:flex;flex-direction:column;gap:0;height:100%}
+.f-row{display:flex;justify-content:space-around;align-items:center;padding:16px 0}
+.pnode{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:default}
+.pcirc{width:46px;height:46px;border-radius:50%;background:rgba(59,130,246,.2);border:2.5px solid #6fa8ff;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;transition:transform .2s;text-align:center}
+.pcirc:hover{transform:scale(1.1)}
+.pcirc.cap{background:rgba(240,180,41,.2);border-color:var(--gold)}
+.pcirc.cap::after{content:'C';position:absolute;top:-3px;right:-3px;width:15px;height:15px;background:var(--gold);border-radius:50%;font-size:.52rem;font-weight:700;color:#07101e;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif}
+.pnum{font-family:'Bebas Neue',cursive;font-size:.85rem;color:#fff;line-height:1}
+.ppos{font-size:.5rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.5px;line-height:1.2}
+.ptag{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.63rem;color:#fff;text-align:center;text-shadow:0 1px 4px rgba(0,0,0,.9);white-space:nowrap;max-width:68px;overflow:hidden;text-overflow:ellipsis}
+.fnote{padding:10px 16px;font-size:.77rem;color:var(--muted);border-top:1px solid var(--border);background:var(--bg3);line-height:1.6}
+/* ROSTER */
+.rtbl{width:100%;border-collapse:collapse;font-size:.82rem}
+.rtbl th{background:var(--bg3);padding:7px 10px;text-align:left;font-family:'Roboto Condensed',sans-serif;font-size:.66rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border)}
+.rtbl td{padding:6px 10px;border-bottom:1px solid rgba(26,45,68,.5);vertical-align:middle}
+.rtbl tr:last-child td{border-bottom:none}
+.rtbl tr:hover td{background:rgba(255,255,255,.02)}
+.pb{font-size:.6rem;font-weight:700;letter-spacing:1px;padding:2px 4px;border-radius:2px;text-transform:uppercase}
+.pgk{background:rgba(251,191,36,.14);color:#fbbf24}
+.pdef{background:rgba(52,211,153,.14);color:#34d399}
+.pmid{background:rgba(96,165,250,.14);color:#60a5fa}
+.pfwd{background:rgba(248,113,113,.14);color:#f87171}
+.pnm{font-weight:600;color:var(--text)}
+.pcl{color:var(--muted);font-size:.75rem}
+.ctag{font-size:.57rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(240,180,41,.18);color:var(--gold);padding:1px 4px;border-radius:2px;margin-left:4px}
+.starter-row{background:rgba(59,130,246,.05)}
+/* POWER */
+.pt{display:flex;align-items:center;gap:13px;padding:12px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:8px;transition:border-color .2s}
+.pt:hover{border-color:rgba(240,180,41,.35)}
+.prk{font-family:'Bebas Neue',cursive;font-size:1.8rem;color:rgba(240,180,41,.22);min-width:30px;line-height:1;text-align:center}
+.pfi{flex:1}
+.pn{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.97rem;color:var(--text);margin-bottom:2px}
+.pd{font-size:.75rem;color:var(--muted);line-height:1.4}
+.fb{font-size:.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(240,180,41,.1);color:var(--gold);padding:1px 5px;border-radius:2px;margin-left:5px}
+.po{text-align:right;min-width:68px}
+.on{font-family:'Bebas Neue',cursive;font-size:1.2rem;color:var(--gold)}
+.ol{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.obar{height:3px;background:var(--border);border-radius:2px;margin-top:5px;overflow:hidden}
+.ofill{height:100%;background:var(--gold);border-radius:2px}
+/* WATCH */
+.wc{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:11px}
+.wt{display:flex;align-items:center;gap:11px;padding:12px 14px}
+.wm{font-family:'Bebas Neue',cursive;font-size:1.3rem;letter-spacing:2px;color:#fff;line-height:1;margin-bottom:3px}
+.wd{font-size:.71rem;color:var(--muted)}
+.hp{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:54px}
+.hl2{font-size:.57rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700}
+.hs{color:var(--gold);font-size:.8rem;letter-spacing:-1px}
+.wb{padding:0 14px 12px;font-size:.78rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--border);padding-top:10px}
+.ww{font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);margin-bottom:3px}
+/* STORY */
+.sc2{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:15px;border-left:3px solid var(--blue)}
+.sc2 h3{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.93rem;color:var(--text);margin-bottom:4px}
+.sc2 p{font-size:.78rem;color:var(--muted);line-height:1.6}
+/* AI */
+.ai-badge{background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:8px}
+.ai-load{display:flex;align-items:center;gap:9px;padding:14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;font-size:.8rem;color:var(--muted)}
+.spin{display:inline-block;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ni{display:flex;gap:9px;padding:11px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;border-left:3px solid var(--blue);margin-bottom:7px}
+.nd{width:7px;height:7px;background:var(--blue);border-radius:50%;margin-top:4px;flex-shrink:0}
+.nt{font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:2px}
+.nb{font-size:.77rem;color:var(--muted);line-height:1.5}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <div class="site-title">FIFA WORLD CUP <span>2026</span></div>
+    <div class="live-pill"><span class="pulse"></span><span id="cd">KICKOFF IN 1D 21H 0M</span></div>
+  </div>
+  <nav class="nav-tabs">
+    <div class="nav-tab active" onclick="showTab(&#39;home&#39;,this)">🏠 Home</div>
+    <div class="nav-tab" onclick="showTab(&#39;schedule&#39;,this)">📅 All Schedules</div>
+    <div class="nav-tab" onclick="showTab(&#39;groups&#39;,this)">📊 Groups</div>
+    <div class="nav-tab usa-tab" onclick="showTab(&#39;usa&#39;,this)">🇺🇸 Team USA</div>
+    <div class="nav-tab" onclick="showTab(&#39;preview&#39;,this)">🔥 Preview</div>
+  </nav>
+</header>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="mo" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="mhdr">
+      <div class="mci"><img id="mflag" class="cf-xl" src="file:///C:/Users/bloos/Downloads/worldcup2026_4.html" alt=""><div><div id="mcn" class="mcn"></div><div id="mcs" class="mcs"></div></div></div>
+      <button class="mclose" onclick="closeModal()">✕</button>
+    </div>
+    <div class="mbody" id="mbody"></div>
+  </div>
+</div>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="stat-row">
+    <div class="stat-chip"><div class="num">48</div><div class="lbl">Teams</div></div>
+    <div class="stat-chip"><div class="num">104</div><div class="lbl">Matches</div></div>
+    <div class="stat-chip"><div class="num">16</div><div class="lbl">Venues</div></div>
+    <div class="stat-chip"><div class="num">3</div><div class="lbl">Countries</div></div>
+    <div class="stat-chip"><div class="num">39</div><div class="lbl">Days</div></div>
+  </div>
+  <div class="grid-2" style="gap:22px;margin-bottom:24px">
+    <div>
+      <div class="eyebrow">Next Up</div>
+      <div class="section-title">Upcoming Games</div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div class="mc usa"><div class="mc-left"><span class="mbadge bu">🇺🇸 USA Opener</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/us.png"><span class="tn">USA</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/py.png"><span class="tn">Paraguay</span></div></div><div class="mmeta"><div class="mdate">JUN 12</div><div class="mtime">9:00 PM ET</div><div class="mvenue">SoFi Stadium, LA</div></div></div>
+        <div class="mc"><div class="mc-left"><span class="mbadge bg">World Cup Opener</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/mx.png"><span class="tn">Mexico</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/za.png"><span class="tn">South Africa</span></div></div><div class="mmeta"><div class="mdate">JUN 11</div><div class="mtime">3:00 PM ET</div><div class="mvenue">Estadio Azteca</div></div></div>
+        <div class="mc hot"><div class="mc-left"><span class="mbadge bh">🔥 Must Watch</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/br.png"><span class="tn">Brazil</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/ma.png"><span class="tn">Morocco</span></div></div><div class="mmeta"><div class="mdate">JUN 13</div><div class="mtime">6:00 PM ET</div><div class="mvenue">MetLife, NJ</div></div></div>
+        <div class="mc hot"><div class="mc-left"><span class="mbadge bh">⚡ Messi's Final WC</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/ar.png"><span class="tn">Argentina</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/dz.png"><span class="tn">Algeria</span></div></div><div class="mmeta"><div class="mdate">JUN 16</div><div class="mtime">TBD</div><div class="mvenue">Dallas</div></div></div>
+        <div class="mc usa"><div class="mc-left"><span class="mbadge bu">🇺🇸 USA Game 2</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/us.png"><span class="tn">USA</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/au.png"><span class="tn">Australia</span></div></div><div class="mmeta"><div class="mdate">JUN 19</div><div class="mtime">3:00 PM ET</div><div class="mvenue">Lumen Field, Seattle</div></div></div>
+        <div class="mc hot"><div class="mc-left"><span class="mbadge bh">🇳🇴 Haaland's WC Debut</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/fr.png"><span class="tn">France</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/no.png"><span class="tn">Norway</span></div></div><div class="mmeta"><div class="mdate">JUN 22</div><div class="mtime">TBD</div><div class="mvenue">Boston</div></div></div>
+        <div class="mc usa"><div class="mc-left"><span class="mbadge bu">🇺🇸 USA Game 3</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/tr.png"><span class="tn">Türkiye</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/us.png"><span class="tn">USA</span></div></div><div class="mmeta"><div class="mdate">JUN 25</div><div class="mtime">10:00 PM ET</div><div class="mvenue">SoFi Stadium, LA</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">What You Need to Know</div>
+      <div class="section-title">Headlines</div>
+      <div class="hl"><div class="hln">01</div><div><div class="hll">Historic Tournament</div><div class="hlt">First-ever 48-team World Cup opens in 2 days</div><div class="hlb">104 matches, 39 days, three countries. Mexico vs South Africa kicks it off June 11 at Estadio Azteca. The final is July 19 at MetLife, NJ.</div></div></div>
+      <div class="hl"><div class="hln">02</div><div><div class="hll">Title Race</div><div class="hlt">Spain (+450) &amp; France (+480) co-favorites; England (+700) close behind</div><div class="hlb">Spain is FIFA #2, Euro 2024 champs. France is FIFA #1. Both are tight at the top of every sportsbook. Argentina defends at +900.</div></div></div>
+      <div class="hl"><div class="hln">03</div><div><div class="hll">USA's Moment</div><div class="hlt">USMNT at +6000 — underdogs but at home with a favorable group</div><div class="hlb">Lost 2-1 to Germany in final warmup June 6 but showed real quality. Group D (Paraguay, Australia, Türkiye) is winnable. Quarterfinals is the goal.</div></div></div>
+      <div class="hl"><div class="hln">04</div><div><div class="hll">GOAT Alert</div><div class="hlt">Messi &amp; Ronaldo: 6th and almost certainly final World Cups for both</div><div class="hlb">Defending champion Argentina's Messi and Portugal's Ronaldo (41) are almost certainly making their last WC appearances. Both are must-watch.</div></div></div>
+      <div class="hl"><div class="hln">05</div><div><div class="hll">Today's News</div><div class="hlt">Somalian referee denied US entry; FIFA corruption probe grows</div><div class="hlb">Referee Omar Abdulkadir Artan denied entry by CBP over "vetting concerns." Separately, FIFA president Infantino faces a criminal complaint over corruption.</div></div></div>
+      <div style="margin-top:14px"><span class="ai-badge">⚡ Live Feed</span><div class="ai-load" id="aiLoad"><span style="color:var(--muted)">Live feed unavailable — check back soon.</span></div><div id="aiContent" style="display:none"></div></div>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="eyebrow">At a Glance</div><div class="section-title">The Big Picture</div>
+  <div class="grid-3" style="gap:11px">
+    <div class="ib"><h3>📅 Key Dates</h3><ul><li><strong style="color:var(--text)">Jun 11</strong> — Tournament opens, Mexico vs S. Africa, 3 PM ET</li><li><strong style="color:var(--text)">Jun 12</strong> — USA opener vs Paraguay, 9 PM ET, LA</li><li><strong style="color:var(--text)">Jun 11–27</strong> — Group Stage</li><li><strong style="color:var(--text)">Jun 29–Jul 4</strong> — Round of 32</li><li><strong style="color:var(--text)">Jul 7–12</strong> — Quarterfinals</li><li><strong style="color:var(--text)">Jul 14–15</strong> — Semifinals</li><li><strong style="color:var(--text)">Jul 19</strong> — Final at MetLife, NJ</li></ul></div>
+    <div class="ib"><h3>📺 How to Watch</h3><ul><li><strong style="color:var(--text)">FOX / FS1</strong> — Primary English broadcast</li><li><strong style="color:var(--text)">FOX One App</strong> — All 104 games, 4K streaming</li><li><strong style="color:var(--text)">Tubi</strong> — Free: Mexico opener + USA vs Paraguay</li><li><strong style="color:var(--text)">Telemundo / Peacock</strong> — Spanish, all 104 games</li></ul></div>
+    <div class="ib"><h3>📍 Host Venues</h3><ul><li><strong style="color:var(--text)">USA (11):</strong> LA, NYC/NJ, Dallas, Seattle, Boston, Miami, Atlanta, Houston, Philly, KC, SF Bay</li><li><strong style="color:var(--text)">Canada (2):</strong> Toronto, Vancouver</li><li><strong style="color:var(--text)">Mexico (3):</strong> Mexico City, Guadalajara, Monterrey</li><li><strong style="color:var(--text)">Final:</strong> MetLife Stadium, NJ — July 19</li></ul></div>
+  </div>
+</div>
+
+<!-- SCHEDULE -->
+<div id="page-schedule" class="page">
+  <div class="eyebrow">Full Tournament · Click any match to open team details</div>
+  <div class="section-title">All Matches</div>
+  <div class="sb">
+    <div class="sh">
+      <div class="sh-top">
+        <div class="sh-title">Match Browser</div>
+        <input class="ssrch" id="ssrch" placeholder="Search team..." oninput="searchSched(this.value)">
+      </div>
+      <div class="scontrols">
+        <button class="sbtn active" onclick="filterSched(&#39;all&#39;,this)">All</button>
+        <button class="sbtn usa-b" onclick="filterSched(&#39;D&#39;,this)">🇺🇸 USA (D)</button>
+        <button class="sbtn" onclick="filterSched(&#39;A&#39;,this)">Grp A</button>
+        <button class="sbtn" onclick="filterSched(&#39;B&#39;,this)">Grp B</button>
+        <button class="sbtn" onclick="filterSched(&#39;C&#39;,this)">Grp C</button>
+        <button class="sbtn" onclick="filterSched(&#39;E&#39;,this)">Grp E</button>
+        <button class="sbtn" onclick="filterSched(&#39;F&#39;,this)">Grp F</button>
+        <button class="sbtn" onclick="filterSched(&#39;G&#39;,this)">Grp G</button>
+        <button class="sbtn" onclick="filterSched(&#39;H&#39;,this)">Grp H</button>
+        <button class="sbtn" onclick="filterSched(&#39;I&#39;,this)">Grp I</button>
+        <button class="sbtn" onclick="filterSched(&#39;J&#39;,this)">Grp J</button>
+        <button class="sbtn" onclick="filterSched(&#39;K&#39;,this)">Grp K</button>
+        <button class="sbtn" onclick="filterSched(&#39;L&#39;,this)">Grp L</button>
+      </div>
+    </div>
+    <div class="slist" id="slist"><div class="sday">Jun 11</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/mx.png" alt="Mexico"> <span class="sg-tn">Mexico</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/za.png" alt="South Africa"> <span class="sg-tn">South Africa</span></div><div class="sg-info">Estadio Azteca, Mexico City</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp A</div><div class="sg-date">Jun 11</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/kr.png" alt="South Korea"> <span class="sg-tn">South Korea</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cz.png" alt="Czechia"> <span class="sg-tn">Czechia</span></div><div class="sg-info">Estadio Akron, Zapopan</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp A</div><div class="sg-date">Jun 11</div><div class="sg-time">10:00 PM ET</div></div></div><div class="sday">Jun 12</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ca.png" alt="Canada"> <span class="sg-tn">Canada</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ba.png" alt="Bosnia-Herzegovina"> <span class="sg-tn">Bosnia-Herzegovina</span></div><div class="sg-info">BMO Field, Toronto</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp B</div><div class="sg-date">Jun 12</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg sg-usa"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/us.png" alt="USA"> <span class="sg-tn">USA</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/py.png" alt="Paraguay"> <span class="sg-tn">Paraguay</span></div><div class="sg-info">SoFi Stadium, Inglewood CA</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp D</div><div class="sg-date">Jun 12</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sday">Jun 13</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/qa.png" alt="Qatar"> <span class="sg-tn">Qatar</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ch.png" alt="Switzerland"> <span class="sg-tn">Switzerland</span></div><div class="sg-info">SoFi Stadium, LA</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp B</div><div class="sg-date">Jun 13</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/br.png" alt="Brazil"> <span class="sg-tn">Brazil</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ma.png" alt="Morocco"> <span class="sg-tn">Morocco</span></div><div class="sg-info">MetLife Stadium, NJ</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp C</div><div class="sg-date">Jun 13</div><div class="sg-time">6:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-sct.png" alt="Scotland"> <span class="sg-tn">Scotland</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ht.png" alt="Haiti"> <span class="sg-tn">Haiti</span></div><div class="sg-info">Gillette Stadium, Boston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp C</div><div class="sg-date">Jun 13</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/au.png" alt="Australia"> <span class="sg-tn">Australia</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tr.png" alt="Türkiye"> <span class="sg-tn">Türkiye</span></div><div class="sg-info">BC Place, Vancouver</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp D</div><div class="sg-date">Jun 13</div><div class="sg-time">12:00 AM ET</div></div></div><div class="sday">Jun 14</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/de.png" alt="Germany"> <span class="sg-tn">Germany</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cw.png" alt="Curaçao"> <span class="sg-tn">Curaçao</span></div><div class="sg-info">NRG Stadium, Houston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp E</div><div class="sg-date">Jun 14</div><div class="sg-time">1:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/fr.png" alt="France"> <span class="sg-tn">France</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sn.png" alt="Senegal"> <span class="sg-tn">Senegal</span></div><div class="sg-info">Hard Rock, Miami</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp I</div><div class="sg-date">Jun 14</div><div class="sg-time">5:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ec.png" alt="Ecuador"> <span class="sg-tn">Ecuador</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ci.png" alt="Ivory Coast"> <span class="sg-tn">Ivory Coast</span></div><div class="sg-info">Lincoln Financial, Philadelphia</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp E</div><div class="sg-date">Jun 14</div><div class="sg-time">7:00 PM ET</div></div></div><div class="sday">Jun 15</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nl.png" alt="Netherlands"> <span class="sg-tn">Netherlands</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/se.png" alt="Sweden"> <span class="sg-tn">Sweden</span></div><div class="sg-info">AT&amp;T Stadium, Dallas</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp F</div><div class="sg-date">Jun 15</div><div class="sg-time">1:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/es.png" alt="Spain"> <span class="sg-tn">Spain</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cv.png" alt="Cape Verde"> <span class="sg-tn">Cape Verde</span></div><div class="sg-info">NRG Stadium, Houston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp H</div><div class="sg-date">Jun 15</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jp.png" alt="Japan"> <span class="sg-tn">Japan</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tn.png" alt="Tunisia"> <span class="sg-tn">Tunisia</span></div><div class="sg-info">Arrowhead Stadium, KC</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp F</div><div class="sg-date">Jun 15</div><div class="sg-time">7:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ir.png" alt="Iran"> <span class="sg-tn">Iran</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/eg.png" alt="Egypt"> <span class="sg-tn">Egypt</span></div><div class="sg-info">Lumen Field, Seattle</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp G</div><div class="sg-date">Jun 15</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uy.png" alt="Uruguay"> <span class="sg-tn">Uruguay</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sa.png" alt="Saudi Arabia"> <span class="sg-tn">Saudi Arabia</span></div><div class="sg-info">Estadio Akron, Zapopan</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp H</div><div class="sg-date">Jun 15</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/be.png" alt="Belgium"> <span class="sg-tn">Belgium</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nz.png" alt="New Zealand"> <span class="sg-tn">New Zealand</span></div><div class="sg-info">BC Place, Vancouver</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp G</div><div class="sg-date">Jun 15</div><div class="sg-time">11:00 PM ET</div></div></div><div class="sday">Jun 16</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/no.png" alt="Norway"> <span class="sg-tn">Norway</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/iq.png" alt="Iraq"> <span class="sg-tn">Iraq</span></div><div class="sg-info">Gillette Stadium, Boston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp I</div><div class="sg-date">Jun 16</div><div class="sg-time">2:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/at.png" alt="Austria"> <span class="sg-tn">Austria</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jo.png" alt="Jordan"> <span class="sg-tn">Jordan</span></div><div class="sg-info">Hard Rock, Miami</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp J</div><div class="sg-date">Jun 16</div><div class="sg-time">5:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ar.png" alt="Argentina"> <span class="sg-tn">Argentina</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/dz.png" alt="Algeria"> <span class="sg-tn">Algeria</span></div><div class="sg-info">AT&amp;T Stadium, Dallas</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp J</div><div class="sg-date">Jun 16</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sday">Jun 17</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-eng.png" alt="England"> <span class="sg-tn">England</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pa.png" alt="Panama"> <span class="sg-tn">Panama</span></div><div class="sg-info">Mercedes-Benz, Atlanta</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp L</div><div class="sg-date">Jun 17</div><div class="sg-time">2:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pt.png" alt="Portugal"> <span class="sg-tn">Portugal</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cd.png" alt="DR Congo"> <span class="sg-tn">DR Congo</span></div><div class="sg-info">Arrowhead Stadium, KC</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp K</div><div class="sg-date">Jun 17</div><div class="sg-time">5:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/co.png" alt="Colombia"> <span class="sg-tn">Colombia</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uz.png" alt="Uzbekistan"> <span class="sg-tn">Uzbekistan</span></div><div class="sg-info">AT&amp;T Stadium, Dallas</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp K</div><div class="sg-date">Jun 17</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gh.png" alt="Ghana"> <span class="sg-tn">Ghana</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/hr.png" alt="Croatia"> <span class="sg-tn">Croatia</span></div><div class="sg-info">Lincoln Financial, Philadelphia</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp L</div><div class="sg-date">Jun 17</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sday">Jun 18</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/za.png" alt="South Africa"> <span class="sg-tn">South Africa</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cz.png" alt="Czechia"> <span class="sg-tn">Czechia</span></div><div class="sg-info">Mercedes-Benz, Atlanta</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp A</div><div class="sg-date">Jun 18</div><div class="sg-time">12:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ch.png" alt="Switzerland"> <span class="sg-tn">Switzerland</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ba.png" alt="Bosnia-Herzegovina"> <span class="sg-tn">Bosnia-Herzegovina</span></div><div class="sg-info">SoFi Stadium, LA</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp B</div><div class="sg-date">Jun 18</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ca.png" alt="Canada"> <span class="sg-tn">Canada</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/qa.png" alt="Qatar"> <span class="sg-tn">Qatar</span></div><div class="sg-info">BC Place, Vancouver</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp B</div><div class="sg-date">Jun 18</div><div class="sg-time">6:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/mx.png" alt="Mexico"> <span class="sg-tn">Mexico</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/kr.png" alt="South Korea"> <span class="sg-tn">South Korea</span></div><div class="sg-info">Estadio Akron, Zapopan</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp A</div><div class="sg-date">Jun 18</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sday">Jun 19</div><div class="sg sg-usa"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/us.png" alt="USA"> <span class="sg-tn">USA</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/au.png" alt="Australia"> <span class="sg-tn">Australia</span></div><div class="sg-info">Lumen Field, Seattle</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp D</div><div class="sg-date">Jun 19</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ma.png" alt="Morocco"> <span class="sg-tn">Morocco</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-sct.png" alt="Scotland"> <span class="sg-tn">Scotland</span></div><div class="sg-info">Gillette Stadium, Boston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp C</div><div class="sg-date">Jun 19</div><div class="sg-time">6:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tr.png" alt="Türkiye"> <span class="sg-tn">Türkiye</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/py.png" alt="Paraguay"> <span class="sg-tn">Paraguay</span></div><div class="sg-info">Levi's Stadium, SF Bay</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp D</div><div class="sg-date">Jun 19</div><div class="sg-time">12:00 AM ET</div></div></div><div class="sday">Jun 20</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sn.png" alt="Senegal"> <span class="sg-tn">Senegal</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/iq.png" alt="Iraq"> <span class="sg-tn">Iraq</span></div><div class="sg-info">BMO Field, Toronto</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp I</div><div class="sg-date">Jun 20</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/de.png" alt="Germany"> <span class="sg-tn">Germany</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ci.png" alt="Ivory Coast"> <span class="sg-tn">Ivory Coast</span></div><div class="sg-info">BMO Field, Toronto</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp E</div><div class="sg-date">Jun 20</div><div class="sg-time">4:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ec.png" alt="Ecuador"> <span class="sg-tn">Ecuador</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cw.png" alt="Curaçao"> <span class="sg-tn">Curaçao</span></div><div class="sg-info">Arrowhead Stadium, KC</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp E</div><div class="sg-date">Jun 20</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/br.png" alt="Brazil"> <span class="sg-tn">Brazil</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ht.png" alt="Haiti"> <span class="sg-tn">Haiti</span></div><div class="sg-info">Lincoln Financial, Philadelphia</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp C</div><div class="sg-date">Jun 20</div><div class="sg-time">8:30 PM ET</div></div></div><div class="sday">Jun 21</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jp.png" alt="Japan"> <span class="sg-tn">Japan</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/se.png" alt="Sweden"> <span class="sg-tn">Sweden</span></div><div class="sg-info">AT&amp;T Stadium, Dallas</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp F</div><div class="sg-date">Jun 21</div><div class="sg-time">1:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/es.png" alt="Spain"> <span class="sg-tn">Spain</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sa.png" alt="Saudi Arabia"> <span class="sg-tn">Saudi Arabia</span></div><div class="sg-info">NRG Stadium, Houston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp H</div><div class="sg-date">Jun 21</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ir.png" alt="Iran"> <span class="sg-tn">Iran</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nz.png" alt="New Zealand"> <span class="sg-tn">New Zealand</span></div><div class="sg-info">Hard Rock, Miami</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp G</div><div class="sg-date">Jun 21</div><div class="sg-time">4:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nl.png" alt="Netherlands"> <span class="sg-tn">Netherlands</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tn.png" alt="Tunisia"> <span class="sg-tn">Tunisia</span></div><div class="sg-info">Arrowhead Stadium, KC</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp F</div><div class="sg-date">Jun 21</div><div class="sg-time">7:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ar.png" alt="Argentina"> <span class="sg-tn">Argentina</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/at.png" alt="Austria"> <span class="sg-tn">Austria</span></div><div class="sg-info">Hard Rock, Miami</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp J</div><div class="sg-date">Jun 21</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uy.png" alt="Uruguay"> <span class="sg-tn">Uruguay</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cv.png" alt="Cape Verde"> <span class="sg-tn">Cape Verde</span></div><div class="sg-info">Estadio Akron, Zapopan</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp H</div><div class="sg-date">Jun 21</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/be.png" alt="Belgium"> <span class="sg-tn">Belgium</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/eg.png" alt="Egypt"> <span class="sg-tn">Egypt</span></div><div class="sg-info">Hard Rock, Miami</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp G</div><div class="sg-date">Jun 21</div><div class="sg-time">11:00 PM ET</div></div></div><div class="sday">Jun 22</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-eng.png" alt="England"> <span class="sg-tn">England</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gh.png" alt="Ghana"> <span class="sg-tn">Ghana</span></div><div class="sg-info">Mercedes-Benz, Atlanta</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp L</div><div class="sg-date">Jun 22</div><div class="sg-time">12:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/hr.png" alt="Croatia"> <span class="sg-tn">Croatia</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pa.png" alt="Panama"> <span class="sg-tn">Panama</span></div><div class="sg-info">Lincoln Financial, Philadelphia</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp L</div><div class="sg-date">Jun 22</div><div class="sg-time">12:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/fr.png" alt="France"> <span class="sg-tn">France</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/no.png" alt="Norway"> <span class="sg-tn">Norway</span></div><div class="sg-info">Gillette Stadium, Boston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp I</div><div class="sg-date">Jun 22</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/dz.png" alt="Algeria"> <span class="sg-tn">Algeria</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jo.png" alt="Jordan"> <span class="sg-tn">Jordan</span></div><div class="sg-info">Mercedes-Benz, Atlanta</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp J</div><div class="sg-date">Jun 22</div><div class="sg-time">5:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cd.png" alt="DR Congo"> <span class="sg-tn">DR Congo</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uz.png" alt="Uzbekistan"> <span class="sg-tn">Uzbekistan</span></div><div class="sg-info">AT&amp;T Stadium, Dallas</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp K</div><div class="sg-date">Jun 22</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sday">Jun 23</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pt.png" alt="Portugal"> <span class="sg-tn">Portugal</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/co.png" alt="Colombia"> <span class="sg-tn">Colombia</span></div><div class="sg-info">Arrowhead Stadium, KC</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp K</div><div class="sg-date">Jun 23</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sday">Jun 24</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ca.png" alt="Canada"> <span class="sg-tn">Canada</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ch.png" alt="Switzerland"> <span class="sg-tn">Switzerland</span></div><div class="sg-info">SoFi Stadium, LA</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp B</div><div class="sg-date">Jun 24</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ba.png" alt="Bosnia-Herzegovina"> <span class="sg-tn">Bosnia-Herzegovina</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/qa.png" alt="Qatar"> <span class="sg-tn">Qatar</span></div><div class="sg-info">BMO Field, Toronto</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp B</div><div class="sg-date">Jun 24</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/za.png" alt="South Africa"> <span class="sg-tn">South Africa</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/kr.png" alt="South Korea"> <span class="sg-tn">South Korea</span></div><div class="sg-info">Estadio BBVA, Monterrey</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp A</div><div class="sg-date">Jun 24</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/mx.png" alt="Mexico"> <span class="sg-tn">Mexico</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cz.png" alt="Czechia"> <span class="sg-tn">Czechia</span></div><div class="sg-info">Estadio Azteca, Mexico City</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp A</div><div class="sg-date">Jun 24</div><div class="sg-time">9:00 PM ET</div></div></div><div class="sday">Jun 25</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ec.png" alt="Ecuador"> <span class="sg-tn">Ecuador</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/de.png" alt="Germany"> <span class="sg-tn">Germany</span></div><div class="sg-info">MetLife Stadium, NJ</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp E</div><div class="sg-date">Jun 25</div><div class="sg-time">4:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ci.png" alt="Ivory Coast"> <span class="sg-tn">Ivory Coast</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cw.png" alt="Curaçao"> <span class="sg-tn">Curaçao</span></div><div class="sg-info">Lincoln Financial, Philadelphia</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp E</div><div class="sg-date">Jun 25</div><div class="sg-time">4:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jp.png" alt="Japan"> <span class="sg-tn">Japan</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nl.png" alt="Netherlands"> <span class="sg-tn">Netherlands</span></div><div class="sg-info">AT&amp;T Stadium, Dallas</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp F</div><div class="sg-date">Jun 25</div><div class="sg-time">7:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ar.png" alt="Argentina"> <span class="sg-tn">Argentina</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jo.png" alt="Jordan"> <span class="sg-tn">Jordan</span></div><div class="sg-info">Mercedes-Benz, Atlanta</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp J</div><div class="sg-date">Jun 25</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/dz.png" alt="Algeria"> <span class="sg-tn">Algeria</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/at.png" alt="Austria"> <span class="sg-tn">Austria</span></div><div class="sg-info">Mercedes-Benz, Atlanta</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp J</div><div class="sg-date">Jun 25</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg sg-usa"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tr.png" alt="Türkiye"> <span class="sg-tn">Türkiye</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/us.png" alt="USA"> <span class="sg-tn">USA</span></div><div class="sg-info">SoFi Stadium, Inglewood CA</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp D</div><div class="sg-date">Jun 25</div><div class="sg-time">10:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/py.png" alt="Paraguay"> <span class="sg-tn">Paraguay</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/au.png" alt="Australia"> <span class="sg-tn">Australia</span></div><div class="sg-info">Levi's Stadium, SF Bay</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp D</div><div class="sg-date">Jun 25</div><div class="sg-time">10:00 PM ET</div></div></div><div class="sday">Jun 26</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-eng.png" alt="England"> <span class="sg-tn">England</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/hr.png" alt="Croatia"> <span class="sg-tn">Croatia</span></div><div class="sg-info">Mercedes-Benz, Atlanta</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp L</div><div class="sg-date">Jun 26</div><div class="sg-time">12:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/br.png" alt="Brazil"> <span class="sg-tn">Brazil</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-sct.png" alt="Scotland"> <span class="sg-tn">Scotland</span></div><div class="sg-info">Gillette Stadium, Boston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp C</div><div class="sg-date">Jun 26</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/eg.png" alt="Egypt"> <span class="sg-tn">Egypt</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nz.png" alt="New Zealand"> <span class="sg-tn">New Zealand</span></div><div class="sg-info">Hard Rock, Miami</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp G</div><div class="sg-date">Jun 26</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/fr.png" alt="France"> <span class="sg-tn">France</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/iq.png" alt="Iraq"> <span class="sg-tn">Iraq</span></div><div class="sg-info">BMO Field, Toronto</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp I</div><div class="sg-date">Jun 26</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sn.png" alt="Senegal"> <span class="sg-tn">Senegal</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/no.png" alt="Norway"> <span class="sg-tn">Norway</span></div><div class="sg-info">BMO Field, Toronto</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp I</div><div class="sg-date">Jun 26</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ma.png" alt="Morocco"> <span class="sg-tn">Morocco</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ht.png" alt="Haiti"> <span class="sg-tn">Haiti</span></div><div class="sg-info">Lincoln Financial, Philadelphia</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp C</div><div class="sg-date">Jun 26</div><div class="sg-time">6:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/se.png" alt="Sweden"> <span class="sg-tn">Sweden</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tn.png" alt="Tunisia"> <span class="sg-tn">Tunisia</span></div><div class="sg-info">Arrowhead Stadium, KC</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp F</div><div class="sg-date">Jun 26</div><div class="sg-time">7:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uy.png" alt="Uruguay"> <span class="sg-tn">Uruguay</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/es.png" alt="Spain"> <span class="sg-tn">Spain</span></div><div class="sg-info">Estadio Akron, Zapopan</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp H</div><div class="sg-date">Jun 26</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sa.png" alt="Saudi Arabia"> <span class="sg-tn">Saudi Arabia</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cv.png" alt="Cape Verde"> <span class="sg-tn">Cape Verde</span></div><div class="sg-info">NRG Stadium, Houston</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp H</div><div class="sg-date">Jun 26</div><div class="sg-time">8:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/be.png" alt="Belgium"> <span class="sg-tn">Belgium</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ir.png" alt="Iran"> <span class="sg-tn">Iran</span></div><div class="sg-info">Lumen Field, Seattle</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp G</div><div class="sg-date">Jun 26</div><div class="sg-time">11:00 PM ET</div></div></div><div class="sday">Jun 27</div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gh.png" alt="Ghana"> <span class="sg-tn">Ghana</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pa.png" alt="Panama"> <span class="sg-tn">Panama</span></div><div class="sg-info">Lincoln Financial, Philadelphia</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp L</div><div class="sg-date">Jun 27</div><div class="sg-time">12:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pt.png" alt="Portugal"> <span class="sg-tn">Portugal</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uz.png" alt="Uzbekistan"> <span class="sg-tn">Uzbekistan</span></div><div class="sg-info">BC Place, Vancouver</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp K</div><div class="sg-date">Jun 27</div><div class="sg-time">3:00 PM ET</div></div></div><div class="sg"><div class="sg-left"><div class="sg-match"><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/co.png" alt="Colombia"> <span class="sg-tn">Colombia</span> <span class="sg-vs">VS</span> <img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cd.png" alt="DR Congo"> <span class="sg-tn">DR Congo</span></div><div class="sg-info">BC Place, Vancouver</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp K</div><div class="sg-date">Jun 27</div><div class="sg-time">6:00 PM ET</div></div></div></div>
+  </div>
+</div>
+
+<!-- GROUPS -->
+<div id="page-groups" class="page">
+  <div class="eyebrow">Group Stage — Click any country to see their schedule</div>
+  <div class="section-title">All 12 Groups</div>
+  <p style="font-size:.78rem;color:var(--muted);margin-bottom:16px">Top 2 from each group + 8 best 3rd-place teams advance to the Round of 32. <span style="color:#6fa8ff">Group D</span> is the USA's group. FIFA rankings as of April 1, 2026.</p>
+  <div class="groups-grid" id="gGrid"><div class="gc ">
+    <div class="gh"><span class="gl">Group A</span><span class="gn">Mexico City</span></div>
+    <div class="gt " onclick="openModal(&#39;Mexico&#39;,&#39;A&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/mx.png" alt="Mexico">
+      <span class="gtn">Mexico</span>
+      <span class="grk">#15</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;South Korea&#39;,&#39;A&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/kr.png" alt="South Korea">
+      <span class="gtn">South Korea</span>
+      <span class="grk">#22</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;South Africa&#39;,&#39;A&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/za.png" alt="South Africa">
+      <span class="gtn">South Africa</span>
+      <span class="grk">#65</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Czechia&#39;,&#39;A&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cz.png" alt="Czechia">
+      <span class="gtn">Czechia</span>
+      <span class="grk">#37</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group B</span><span class="gn">Toronto</span></div>
+    <div class="gt " onclick="openModal(&#39;Canada&#39;,&#39;B&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ca.png" alt="Canada">
+      <span class="gtn">Canada</span>
+      <span class="grk">#27</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Switzerland&#39;,&#39;B&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ch.png" alt="Switzerland">
+      <span class="gtn">Switzerland</span>
+      <span class="grk">#19</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Qatar&#39;,&#39;B&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/qa.png" alt="Qatar">
+      <span class="gtn">Qatar</span>
+      <span class="grk">#58</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Bosnia-Herzegovina&#39;,&#39;B&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ba.png" alt="Bosnia-Herzegovina">
+      <span class="gtn">Bosnia-Herzegovina</span>
+      <span class="grk">#60</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group C</span><span class="gn">NJ</span></div>
+    <div class="gt " onclick="openModal(&#39;Brazil&#39;,&#39;C&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/br.png" alt="Brazil">
+      <span class="gtn">Brazil</span>
+      <span class="grk">#6</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Morocco&#39;,&#39;C&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ma.png" alt="Morocco">
+      <span class="gtn">Morocco</span>
+      <span class="grk">#8</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Scotland&#39;,&#39;C&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-sct.png" alt="Scotland">
+      <span class="gtn">Scotland</span>
+      <span class="grk">#41</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Haiti&#39;,&#39;C&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ht.png" alt="Haiti">
+      <span class="gtn">Haiti</span>
+      <span class="grk">#88</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc usa-g">
+    <div class="gh"><span class="gl">Group D ★</span><span class="gn">LA</span></div>
+    <div class="gt ur" onclick="openModal(&#39;USA&#39;,&#39;D&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/us.png" alt="USA">
+      <span class="gtn" style="color:#6fa8ff;font-weight:700">USA</span>
+      <span class="grk">#16</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Paraguay&#39;,&#39;D&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/py.png" alt="Paraguay">
+      <span class="gtn">Paraguay</span>
+      <span class="grk">#62</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Australia&#39;,&#39;D&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/au.png" alt="Australia">
+      <span class="gtn">Australia</span>
+      <span class="grk">#24</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Türkiye&#39;,&#39;D&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tr.png" alt="Türkiye">
+      <span class="gtn">Türkiye</span>
+      <span class="grk">#50</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group E</span><span class="gn">Houston</span></div>
+    <div class="gt " onclick="openModal(&#39;Germany&#39;,&#39;E&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/de.png" alt="Germany">
+      <span class="gtn">Germany</span>
+      <span class="grk">#10</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Ecuador&#39;,&#39;E&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ec.png" alt="Ecuador">
+      <span class="gtn">Ecuador</span>
+      <span class="grk">#44</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Ivory Coast&#39;,&#39;E&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ci.png" alt="Ivory Coast">
+      <span class="gtn">Ivory Coast</span>
+      <span class="grk">#48</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Curaçao&#39;,&#39;E&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cw.png" alt="Curaçao">
+      <span class="gtn">Curaçao</span>
+      <span class="grk">#82</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group F</span><span class="gn">Dallas</span></div>
+    <div class="gt " onclick="openModal(&#39;Netherlands&#39;,&#39;F&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nl.png" alt="Netherlands">
+      <span class="gtn">Netherlands</span>
+      <span class="grk">#7</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Japan&#39;,&#39;F&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jp.png" alt="Japan">
+      <span class="gtn">Japan</span>
+      <span class="grk">#18</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Tunisia&#39;,&#39;F&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/tn.png" alt="Tunisia">
+      <span class="gtn">Tunisia</span>
+      <span class="grk">#43</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Sweden&#39;,&#39;F&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/se.png" alt="Sweden">
+      <span class="gtn">Sweden</span>
+      <span class="grk">#29</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group G</span><span class="gn">Seattle</span></div>
+    <div class="gt " onclick="openModal(&#39;Belgium&#39;,&#39;G&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/be.png" alt="Belgium">
+      <span class="gtn">Belgium</span>
+      <span class="grk">#9</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Iran&#39;,&#39;G&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ir.png" alt="Iran">
+      <span class="gtn">Iran</span>
+      <span class="grk">#23</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Egypt&#39;,&#39;G&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/eg.png" alt="Egypt">
+      <span class="gtn">Egypt</span>
+      <span class="grk">#34</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;New Zealand&#39;,&#39;G&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/nz.png" alt="New Zealand">
+      <span class="gtn">New Zealand</span>
+      <span class="grk">#97</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group H</span><span class="gn">Houston</span></div>
+    <div class="gt " onclick="openModal(&#39;Spain&#39;,&#39;H&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/es.png" alt="Spain">
+      <span class="gtn">Spain</span>
+      <span class="grk">#2</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Uruguay&#39;,&#39;H&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uy.png" alt="Uruguay">
+      <span class="gtn">Uruguay</span>
+      <span class="grk">#17</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Saudi Arabia&#39;,&#39;H&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sa.png" alt="Saudi Arabia">
+      <span class="gtn">Saudi Arabia</span>
+      <span class="grk">#57</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Cape Verde&#39;,&#39;H&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cv.png" alt="Cape Verde">
+      <span class="gtn">Cape Verde</span>
+      <span class="grk">#73</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group I</span><span class="gn">Boston</span></div>
+    <div class="gt " onclick="openModal(&#39;France&#39;,&#39;I&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/fr.png" alt="France">
+      <span class="gtn">France</span>
+      <span class="grk">#1</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Senegal&#39;,&#39;I&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/sn.png" alt="Senegal">
+      <span class="gtn">Senegal</span>
+      <span class="grk">#14</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Norway&#39;,&#39;I&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/no.png" alt="Norway">
+      <span class="gtn">Norway</span>
+      <span class="grk">#33</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Iraq&#39;,&#39;I&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/iq.png" alt="Iraq">
+      <span class="gtn">Iraq</span>
+      <span class="grk">#69</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group J</span><span class="gn">Dallas</span></div>
+    <div class="gt " onclick="openModal(&#39;Argentina&#39;,&#39;J&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/ar.png" alt="Argentina">
+      <span class="gtn">Argentina</span>
+      <span class="grk">#3</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Austria&#39;,&#39;J&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/at.png" alt="Austria">
+      <span class="gtn">Austria</span>
+      <span class="grk">#26</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Algeria&#39;,&#39;J&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/dz.png" alt="Algeria">
+      <span class="gtn">Algeria</span>
+      <span class="grk">#52</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Jordan&#39;,&#39;J&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/jo.png" alt="Jordan">
+      <span class="gtn">Jordan</span>
+      <span class="grk">#74</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group K</span><span class="gn">Kansas City</span></div>
+    <div class="gt " onclick="openModal(&#39;Portugal&#39;,&#39;K&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pt.png" alt="Portugal">
+      <span class="gtn">Portugal</span>
+      <span class="grk">#5</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Colombia&#39;,&#39;K&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/co.png" alt="Colombia">
+      <span class="gtn">Colombia</span>
+      <span class="grk">#13</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Uzbekistan&#39;,&#39;K&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/uz.png" alt="Uzbekistan">
+      <span class="gtn">Uzbekistan</span>
+      <span class="grk">#67</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;DR Congo&#39;,&#39;K&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/cd.png" alt="DR Congo">
+      <span class="gtn">DR Congo</span>
+      <span class="grk">#59</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div><div class="gc ">
+    <div class="gh"><span class="gl">Group L</span><span class="gn">Atlanta</span></div>
+    <div class="gt " onclick="openModal(&#39;England&#39;,&#39;L&#39;)">
+      <span class="gs">1</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gb-eng.png" alt="England">
+      <span class="gtn">England</span>
+      <span class="grk">#4</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Croatia&#39;,&#39;L&#39;)">
+      <span class="gs">2</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/hr.png" alt="Croatia">
+      <span class="gtn">Croatia</span>
+      <span class="grk">#11</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Panama&#39;,&#39;L&#39;)">
+      <span class="gs">3</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/pa.png" alt="Panama">
+      <span class="gtn">Panama</span>
+      <span class="grk">#79</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div><div class="gt " onclick="openModal(&#39;Ghana&#39;,&#39;L&#39;)">
+      <span class="gs">4</span><img style="height:15px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="./WC 2026 Primer_files/gh.png" alt="Ghana">
+      <span class="gtn">Ghana</span>
+      <span class="grk">#66</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>
+  </div></div>
+  <div class="ib" style="margin-top:10px"><h3>📋 How Advancement Works</h3><p>Top 2 from each of 12 groups (24 teams) advance automatically. The 8 best third-place finishers (ranked by points → goal difference → goals scored) also advance, making 32 teams total in the knockout bracket. A team can lose once and still advance.</p></div>
+</div>
+
+<!-- USA -->
+<div id="page-usa" class="page">
+  <div style="background:linear-gradient(135deg,#0a1628,#0e1f40 50%,#1a0d0d);border:1px solid #1a2e50;border-radius:10px;padding:24px;margin-bottom:22px;position:relative;overflow:hidden">
+    <div style="position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:5rem;opacity:.06">🇺🇸</div>
+    <div class="eyebrow">The Stars &amp; Stripes</div>
+    <div style="font-family:&#39;Bebas Neue&#39;,cursive;font-size:2.7rem;letter-spacing:4px;line-height:1;margin-bottom:5px;color:#fff">TEAM <span style="color:#6fa8ff">USA</span> 2026</div>
+    <div style="font-size:.85rem;color:rgba(220,232,245,.7)">FIFA Rank: <strong style="color:var(--text)">#16</strong> (April 2026) &nbsp;·&nbsp; Win Odds: <strong style="color:var(--text)">+6000</strong> &nbsp;·&nbsp; Coach: <strong style="color:var(--text)">Mauricio Pochettino</strong> &nbsp;·&nbsp; Captain: <strong style="color:var(--text)">Tim Ream</strong></div>
+  </div>
+
+  <div style="margin-bottom:22px">
+    <div class="eyebrow">Group D</div>
+    <div class="section-title">USA's Games</div>
+    <div style="display:flex;flex-direction:column;gap:9px">
+      <div class="mc usa"><div class="mc-left"><span class="mbadge bu">Game 1 · Jun 12 · 9:00 PM ET</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/us.png"><span class="tn">USA</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/py.png"><span class="tn">Paraguay</span></div><div style="font-size:.72rem;color:var(--muted);margin-top:3px">Must-win opener. Almirón leads Paraguay. SoFi Stadium at capacity.</div></div><div class="mmeta"><div class="mvenue">SoFi Stadium, Inglewood CA</div></div></div>
+      <div class="mc usa"><div class="mc-left"><span class="mbadge bu">Game 2 · Jun 19 · 3:00 PM ET</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/us.png"><span class="tn">USA</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/au.png"><span class="tn">Australia</span></div><div style="font-size:.72rem;color:var(--muted);margin-top:3px">Socceroos are dangerous — don't sleep on them.</div></div><div class="mmeta"><div class="mvenue">Lumen Field, Seattle</div></div></div>
+      <div class="mc usa"><div class="mc-left"><span class="mbadge bu">Game 3 · Jun 25 · 10:00 PM ET</span><div class="mteams"><img class="cf" src="./WC 2026 Primer_files/tr.png"><span class="tn">Türkiye</span><span class="vs">VS</span><img class="cf" src="./WC 2026 Primer_files/us.png"><span class="tn">USA</span></div><div style="font-size:.72rem;color:var(--muted);margin-top:3px">Arda Güler (Real Madrid) is Türkiye's star playmaker.</div></div><div class="mmeta"><div class="mvenue">SoFi Stadium, Inglewood CA</div></div></div>
+    </div>
+    <div style="margin-top:9px;padding:9px 13px;background:var(--bg2);border-radius:6px;border-left:3px solid #6fa8ff;font-size:.77rem;color:var(--muted)"><strong style="color:#6fa8ff">Recent Form:</strong> Won CONCACAF Nations League (beat Mexico 2-0 in final, Mar 2026). Lost to Belgium 5-2 and Portugal 2-0 in March friendlies. Beat Senegal 3-2 on May 31. Lost 2-1 to Germany on June 6 (Soldier Field) — Antonee Robinson scored a worldie equalizer before Germany won late.</div>
+  </div>
+
+  <!-- FORMATION — based on official US Soccer XI vs Germany June 6, 2026 -->
+  <div class="fwrap">
+    <div class="fhdr">
+      <div class="fhdr-title">⚽ Starting XI vs Paraguay — Based on Germany Friendly (Jun 6)</div>
+      <div class="fhdr-badge">4-3-3</div>
+    </div>
+    <div class="pitch" id="pitch">
+      <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <rect x="8" y="4" width="84" height="92" fill="none" stroke="rgba(255,255,255,.18)" stroke-width=".5"></rect>
+        <line x1="8" y1="50" x2="92" y2="50" stroke="rgba(255,255,255,.15)" stroke-width=".4"></line>
+        <circle cx="50" cy="50" r="10" fill="none" stroke="rgba(255,255,255,.15)" stroke-width=".4"></circle>
+        <circle cx="50" cy="50" r="1" fill="rgba(255,255,255,.3)"></circle>
+        <rect x="28" y="4" width="44" height="16" fill="none" stroke="rgba(255,255,255,.12)" stroke-width=".4"></rect>
+        <rect x="28" y="80" width="44" height="16" fill="none" stroke="rgba(255,255,255,.12)" stroke-width=".4"></rect>
+        <rect x="36" y="4" width="28" height="8" fill="none" stroke="rgba(255,255,255,.1)" stroke-width=".35"></rect>
+        <rect x="36" y="88" width="28" height="8" fill="none" stroke="rgba(255,255,255,.1)" stroke-width=".35"></rect>
+      </svg>
+      <div id="formRows" class="formation-rows"><div class="f-row"><div class="pnode"><div class="pcirc "><div class="pnum">24</div><div class="ppos">GK</div></div><div class="ptag">Freese</div></div></div><div class="f-row"><div class="pnode"><div class="pcirc "><div class="pnum">16</div><div class="ppos">RB</div></div><div class="ptag">Freeman</div></div><div class="pnode"><div class="pcirc "><div class="pnum">22</div><div class="ppos">CB</div></div><div class="ptag">McKenzie</div></div><div class="pnode"><div class="pcirc cap"><div class="pnum">13</div><div class="ppos">CB</div></div><div class="ptag">Ream</div></div><div class="pnode"><div class="pcirc "><div class="pnum">5</div><div class="ppos">LB</div></div><div class="ptag">A.Robinson</div></div></div><div class="f-row"><div class="pnode"><div class="pcirc "><div class="pnum">17</div><div class="ppos">CM</div></div><div class="ptag">Tillman</div></div><div class="pnode"><div class="pcirc "><div class="pnum">4</div><div class="ppos">DM</div></div><div class="ptag">Adams</div></div><div class="pnode"><div class="pcirc "><div class="pnum">8</div><div class="ppos">CM</div></div><div class="ptag">McKennie</div></div></div><div class="f-row"><div class="pnode"><div class="pcirc "><div class="pnum">2</div><div class="ppos">RW</div></div><div class="ptag">Dest</div></div><div class="pnode"><div class="pcirc "><div class="pnum">20</div><div class="ppos">ST</div></div><div class="ptag">Balogun</div></div><div class="pnode"><div class="pcirc "><div class="pnum">10</div><div class="ppos">LW</div></div><div class="ptag">Pulisic</div></div></div></div>
+    </div>
+    <div class="fnote">Official Starting XI vs Germany (Jun 6, 2026 · Source: USSoccer.com): <strong style="color:var(--text)">Freese; Freeman, McKenzie, Ream (C), A.Robinson; Adams, McKennie, Tillman; Dest, Balogun, Pulisic.</strong><br>Formation: <strong style="color:#6fa8ff">4-3-3</strong> — back four with Freeman (RB), McKenzie (CB), Ream (CB), Robinson (LB). Adams as #6 pivot, McKennie + Tillman ahead. Dest wide right, Pulisic wide left, Balogun as striker. <strong style="color:#6fa8ff">Ream is captain</strong>. Chris Richards (ankle) may return for Paraguay.</div>
+  </div>
+
+  <!-- ROSTER -->
+  <div style="margin-bottom:22px">
+    <div class="eyebrow">Official 26-Man Squad</div>
+    <div class="section-title">The Roster</div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+      <div style="background:var(--bg3);padding:9px 13px;border-bottom:1px solid var(--border);font-family:&#39;Roboto Condensed&#39;,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">USMNT · Announced May 26, 2026 · Coach Mauricio Pochettino · <span style="color:var(--gold)">Bold = started vs Germany Jun 6</span></div>
+      <div style="overflow-x:auto"><table class="rtbl"><thead><tr><th>#</th><th>Pos</th><th>Player</th><th>Club</th><th>Note</th></tr></thead><tbody>
+        <tr class="starter-row"><td class="pcl">24</td><td><span class="pb pgk">GK</span></td><td class="pnm">Matt Freese</td><td class="pcl">New York City FC</td><td class="pcl">★ Started vs Germany · Expected #1</td></tr>
+        <tr><td class="pcl">1</td><td><span class="pb pgk">GK</span></td><td class="pnm">Matt Turner</td><td class="pcl">New England Revolution</td><td class="pcl">Veteran backup</td></tr>
+        <tr><td class="pcl">25</td><td><span class="pb pgk">GK</span></td><td class="pnm">Chris Brady</td><td class="pcl">Chicago Fire</td><td class="pcl">3rd choice</td></tr>
+        <tr class="starter-row"><td class="pcl">5</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Antonee Robinson</td><td class="pcl">Fulham (EPL)</td><td class="pcl">★ Started · LWB · Scored vs Germany</td></tr>
+        <tr class="starter-row"><td class="pcl">2</td><td><span class="pb pdef">DEF</span></td><td class="pcl">Sergiño Dest</td><td class="pcl">PSV Eindhoven</td><td class="pcl">★ Started · RWB / CB</td></tr>
+        <tr><td class="pcl">3</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Chris Richards</td><td class="pcl">Crystal Palace (EPL)</td><td class="pcl">Ankle injury — expected fit for Paraguay</td></tr>
+        <tr class="starter-row"><td class="pcl">13</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Tim Ream <span class="ctag">C</span></td><td class="pcl">Charlotte FC (MLS)</td><td class="pcl">★ Started · Captain · CB</td></tr>
+        <tr class="starter-row"><td class="pcl">12</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Miles Robinson</td><td class="pcl">FC Cincinnati (MLS)</td><td class="pcl">★ Started · CB</td></tr>
+        <tr><td class="pcl">6</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Auston Trusty</td><td class="pcl">Celtic FC (SPL)</td><td class="pcl">CB depth</td></tr>
+        <tr><td class="pcl">22</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Mark McKenzie</td><td class="pcl">Toulouse (Ligue 1)</td><td class="pcl">CB depth</td></tr>
+        <tr><td class="pcl">23</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Joe Scally</td><td class="pcl">Borussia Mönchengladbach</td><td class="pcl">Versatile back</td></tr>
+        <tr class="starter-row"><td class="pcl">16</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Alex Freeman</td><td class="pcl">Villarreal (La Liga)</td><td class="pcl">★ Started · RWB</td></tr>
+        <tr><td class="pcl">18</td><td><span class="pb pdef">DEF</span></td><td class="pnm">Max Arfsten</td><td class="pcl">Columbus Crew (MLS)</td><td class="pcl">Depth</td></tr>
+        <tr class="starter-row"><td class="pcl">4</td><td><span class="pb pmid">MID</span></td><td class="pnm">Tyler Adams</td><td class="pcl">Bournemouth (EPL)</td><td class="pcl">★ Started · Defensive pivot</td></tr>
+        <tr class="starter-row"><td class="pcl">8</td><td><span class="pb pmid">MID</span></td><td class="pnm">Weston McKennie</td><td class="pcl">Juventus (Serie A)</td><td class="pcl">★ Started · Box-to-box CM</td></tr>
+        <tr><td class="pcl">7</td><td><span class="pb pmid">MID</span></td><td class="pnm">Gio Reyna</td><td class="pcl">Borussia Mönchengladbach</td><td class="pcl">Attacking option off bench</td></tr>
+        <tr class="starter-row"><td class="pcl">17</td><td><span class="pb pmid">MID</span></td><td class="pnm">Malik Tillman</td><td class="pcl">Bayer Leverkusen</td><td class="pcl">★ Started · No.10 / Wide</td></tr>
+        <tr><td class="pcl">11</td><td><span class="pb pmid">MID</span></td><td class="pnm">Brenden Aaronson</td><td class="pcl">Leeds United</td><td class="pcl">2022 WC vet, bench option</td></tr>
+        <tr><td class="pcl">15</td><td><span class="pb pmid">MID</span></td><td class="pnm">Cristian Roldan</td><td class="pcl">Seattle Sounders (MLS)</td><td class="pcl">Veteran depth</td></tr>
+        <tr><td class="pcl">14</td><td><span class="pb pmid">MID</span></td><td class="pnm">Sebastian Berhalter</td><td class="pcl">Vancouver Whitecaps</td><td class="pcl">Son of ex-coach Gregg</td></tr>
+        <tr class="starter-row"><td class="pcl">10</td><td><span class="pb pfwd">FWD</span></td><td class="pnm">Christian Pulisic</td><td class="pcl">AC Milan (Serie A)</td><td class="pcl">★ Started · Key attacker</td></tr>
+        <tr class="starter-row"><td class="pcl">20</td><td><span class="pb pfwd">FWD</span></td><td class="pnm">Folarin Balogun</td><td class="pcl">AS Monaco (Ligue 1)</td><td class="pcl">★ Started · CF · 19 goals this season</td></tr>
+        <tr><td class="pcl">9</td><td><span class="pb pfwd">FWD</span></td><td class="pnm">Ricardo Pepi</td><td class="pcl">PSV Eindhoven</td><td class="pcl">19 goals · Impact sub</td></tr>
+        <tr><td class="pcl">19</td><td><span class="pb pfwd">FWD</span></td><td class="pnm">Haji Wright</td><td class="pcl">Coventry City</td><td class="pcl">18 goals · Impact sub</td></tr>
+        <tr><td class="pcl">21</td><td><span class="pb pfwd">FWD</span></td><td class="pnm">Tim Weah</td><td class="pcl">Juventus (Serie A)</td><td class="pcl">Son of Liberian president · Wide forward</td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Narrative</div><div class="section-title">Key Storylines</div>
+  <div class="grid-2" style="gap:11px">
+    <div class="sc2"><div style="font-size:1.1rem;margin-bottom:5px">⭐</div><h3>Pulisic's Defining Moment</h3><p>Christian Pulisic (AC Milan) is at the peak of his career, though he hasn't scored in 21 straight games. As the key attacker on American soil, this World Cup will define his legacy — for better or worse.</p></div>
+    <div class="sc2"><div style="font-size:1.1rem;margin-bottom:5px">🎓</div><h3>Pochettino's System</h3><p>The 3-4-3/3-2-5 hybrid has looked dangerous when it clicks. Mixed warmup results — blown out by Belgium, beat Senegal, competitive vs Germany. Can the system hold under real tournament pressure?</p></div>
+    <div class="sc2"><div style="font-size:1.1rem;margin-bottom:5px">👨‍👦</div><h3>Soccer Dynasties: Reyna &amp; Berhalter</h3><p>Gio Reyna follows father Claudio (1994–2006) onto the WC roster. Sebastian Berhalter follows father Gregg (coach 2002–2022). Two father-son legacies — a genuine first in US soccer history.</p></div>
+    <div class="sc2"><div style="font-size:1.1rem;margin-bottom:5px">🎯</div><h3>Striker Trio: 56 Goals Combined</h3><p>Balogun (Monaco, 19g), Pepi (PSV, 19g), Haji Wright (Coventry, 18g) combined for 56 goals this club season. For a team historically starved for strikers, this is a revolution. Who starts?</p></div>
+    <div class="sc2"><div style="font-size:1.1rem;margin-bottom:5px">🏠</div><h3>Home Crowd = 12th Man</h3><p>SoFi at capacity for the opener, soccer-mad Seattle for game 2, then back to LA. Every previous strong host made a run: France 1998, Germany 2006. The crowd will be electric.</p></div>
+    <div class="sc2"><div style="font-size:1.1rem;margin-bottom:5px">❌</div><h3>Notable Absences</h3><p>Diego Luna, Tanner Tessmann, Johnny Cardoso, and Patrick Agyemang all missed the final squad due to injury. Midfield depth is thinner than Pochettino would like going in.</p></div>
+  </div>
+</div>
+
+<!-- PREVIEW -->
+<div id="page-preview" class="page">
+  <div class="eyebrow">Why This One's Different</div><div class="section-title">What Makes 2026 Special</div>
+  <div class="grid-3" style="gap:11px;margin-bottom:22px">
+    <div class="ib"><h3>🌍 Biggest Ever</h3><p>48 teams, 104 matches, 16 stadiums, three countries. The first-ever 48-team men's World Cup — 16 more teams than Qatar 2022. More nations, more underdogs, more chaos.</p></div>
+    <div class="ib"><h3>🏟️ Three Hosts</h3><p>First WC ever co-hosted by three nations. Three separate opening ceremonies. Azteca hosts its third WC opening match (1970, 1986, 2026) — a genuine historical milestone.</p></div>
+    <div class="ib"><h3>👑 GOAT Final Chapter</h3><p>Messi (Argentina) and Ronaldo (Portugal, age 41) making their 6th — almost certainly final — World Cup appearances. Two legendary careers reach their last chapter this summer.</p></div>
+    <div class="ib"><h3>🔀 New Bracket Format</h3><p>Top 2 + 8 best 3rd-place teams advance. 32-team knockout bracket. Teams can afford one loss and potentially still advance — changes strategy in every group's final matchday.</p></div>
+    <div class="ib"><h3>🎉 American Soccer's Moment</h3><p>MLS investment, a European-based generation in their prime, Pochettino at the helm. Playing at home. Unprecedented striker depth. This is what it's been building toward since 1994.</p></div>
+    <div class="ib"><h3>📍 Match #1,000</h3><p>Tunisia vs Japan on June 21 will be the 1,000th match in FIFA World Cup history. Inside a tournament full of firsts, that milestone is itself one for the record books.</p></div>
+  </div>
+  <hr class="divider">
+  <div class="eyebrow">Source: FIFA Rankings April 1, 2026 + FanDuel/DraftKings odds June 2026</div>
+  <div class="section-title">Power Rankings</div>
+  <div class="pt"><div class="prk">1</div><img class="cf-lg" src="./WC 2026 Primer_files/es(1).png" alt="Spain"><div class="pfi"><div class="pn">Spain <span class="fb">FIFA #2</span></div><div class="pd">Euro 2024 champions. Lamine Yamal, Pedri, dominant pressing system. Slight betting favorite. Group H: Uruguay, Saudi Arabia, Cape Verde.</div></div><div class="po"><div class="on">+450</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:90%"></div></div></div></div>
+  <div class="pt"><div class="prk">2</div><img class="cf-lg" src="./WC 2026 Primer_files/fr(1).png" alt="France"><div class="pfi"><div class="pn">France <span class="fb">FIFA #1</span></div><div class="pd">FIFA's #1 ranked team. Mbappé at Real Madrid, deep squad at every position. 2022 WC finalists. Group I: Senegal, Norway, Iraq.</div></div><div class="po"><div class="on">+480</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:87%"></div></div></div></div>
+  <div class="pt"><div class="prk">3</div><img class="cf-lg" src="./WC 2026 Primer_files/gb-eng(1).png" alt="England"><div class="pfi"><div class="pn">England <span class="fb">FIFA #4</span></div><div class="pd">Bellingham, Kane, Saka, Foden — most talented English squad in a generation. Euro 2021 finalist, WC semis 2018 + 2022. Group L: Croatia, Panama, Ghana.</div></div><div class="po"><div class="on">+700</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:71%"></div></div></div></div>
+  <div class="pt"><div class="prk">4</div><img class="cf-lg" src="./WC 2026 Primer_files/br(1).png" alt="Brazil"><div class="pfi"><div class="pn">Brazil <span class="fb">FIFA #6</span></div><div class="pd">Vinicius Jr, Rodrygo, Raphinha, Endrick — overwhelming attacking talent. Tough opener vs Morocco Jun 13. Haven't won since 2002.</div></div><div class="po"><div class="on">+850</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:60%"></div></div></div></div>
+  <div class="pt"><div class="prk">5</div><img class="cf-lg" src="./WC 2026 Primer_files/ar(1).png" alt="Argentina"><div class="pfi"><div class="pn">Argentina <span class="fb">FIFA #3</span></div><div class="pd">Defending champions. Messi's final WC. Álvarez, De Paul, know how to win tight knockout games. Messi rested vs Honduras before tournament.</div></div><div class="po"><div class="on">+900</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:56%"></div></div></div></div>
+  <div class="pt"><div class="prk">6</div><img class="cf-lg" src="./WC 2026 Primer_files/pt(1).png" alt="Portugal"><div class="pfi"><div class="pn">Portugal <span class="fb">FIFA #5</span></div><div class="pd">Ronaldo's last WC but squad goes deep: Bruno Fernandes, Bernardo Silva, Vitinha. Shortened from 10-1 due to heavy public backing. Tough Group K with Colombia.</div></div><div class="po"><div class="on">+1000</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:47%"></div></div></div></div>
+  <div class="pt"><div class="prk">7</div><img class="cf-lg" src="./WC 2026 Primer_files/de(1).png" alt="Germany"><div class="pfi"><div class="pn">Germany <span class="fb">FIFA #10</span></div><div class="pd">+1400. Beat USA 2-1 in Chicago Jun 6. Kai Havertz, Florian Wirtz — young, reimagined under Nagelsmann. Favorable Group E: Ecuador, Ivory Coast, Curaçao.</div></div><div class="po"><div class="on">+1400</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:37%"></div></div></div></div>
+  <div class="pt"><div class="prk">8</div><img class="cf-lg" src="./WC 2026 Primer_files/nl(1).png" alt="Netherlands"><div class="pfi"><div class="pn">Netherlands <span class="fb">FIFA #7</span></div><div class="pd">+2000. Van Dijk, Gakpo, Xavi Simons, Reijnders — dangerous and undervalued. Group F manageable (Japan, Tunisia, Sweden). 20-1 feels like genuine value.</div></div><div class="po"><div class="on">+2000</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:28%"></div></div></div></div>
+  <div class="pt"><div class="prk">9</div><img class="cf-lg" src="./WC 2026 Primer_files/ma(1).png" alt="Morocco"><div class="pfi"><div class="pn">Morocco <span class="fb">FIFA #8</span></div><div class="pd">+3500. 2022 semifinalists. Elite defensive organization, devastating on the counter. Tough opener vs Brazil. Africa's best bet to go deep again.</div></div><div class="po"><div class="on">+3500</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:20%"></div></div></div></div>
+  <div class="pt"><div class="prk">10</div><img class="cf-lg" src="./WC 2026 Primer_files/us(1).png" alt="USA"><div class="pfi"><div class="pn">USA <span class="fb">FIFA #16</span></div><div class="pd">+6000. 40% to win Group D (Kalshi markets). Home advantage, favorable group, 56 combined striker goals. Lost 2-1 to Germany in final warmup — showed quality. Realistic target: quarterfinals.</div></div><div class="po"><div class="on">+6000</div><div class="ol">To Win</div><div class="obar"><div class="ofill" style="width:12%"></div></div></div></div>
+  <hr class="divider">
+  <div class="eyebrow">Mark Your Calendar</div><div class="section-title">Must-Watch Games</div>
+  <div class="wc"><div class="wt"><div style="flex:1"><div class="wm"><img class="cf-sm" src="./WC 2026 Primer_files/us.png" style="vertical-align:middle;margin-right:4px"> USA vs Paraguay <img class="cf-sm" src="./WC 2026 Primer_files/py.png" style="vertical-align:middle;margin-left:4px"></div><div class="wd">June 12 · 9 PM ET · SoFi Stadium, Los Angeles · Group D</div></div><div class="hp"><div class="hl2">Hype</div><div class="hs">★★★★★</div></div></div><div class="wb"><div class="ww">Why Watch</div>The USA's opener on home soil. SoFi at capacity. Pulisic in the spotlight. 70,000 fans, the biggest stage US soccer has seen since 1994. Paraguay (Almirón, Enciso) are dangerous and motivated to steal the show.</div></div>
+  <div class="wc"><div class="wt"><div style="flex:1"><div class="wm"><img class="cf-sm" src="./WC 2026 Primer_files/br.png" style="vertical-align:middle;margin-right:4px"> Brazil vs Morocco <img class="cf-sm" src="./WC 2026 Primer_files/ma.png" style="vertical-align:middle;margin-left:4px"></div><div class="wd">June 13 · 6 PM ET · MetLife Stadium, NJ · Group C</div></div><div class="hp"><div class="hl2">Hype</div><div class="hs">★★★★★</div></div></div><div class="wb"><div class="ww">Why Watch</div>Best non-USA group stage clash. Morocco (FIFA #8) reached the 2022 semis as Africa's first-ever WC semifinalist. Brazil (FIFA #6) desperate to end a 24-year drought. Vinicius Jr vs the Atlas Lions' elite defense.</div></div>
+  <div class="wc"><div class="wt"><div style="flex:1"><div class="wm"><img class="cf-sm" src="./WC 2026 Primer_files/fr.png" style="vertical-align:middle;margin-right:4px"> France vs Norway <img class="cf-sm" src="./WC 2026 Primer_files/no.png" style="vertical-align:middle;margin-left:4px"></div><div class="wd">June 22 · Group I · Gillette Stadium, Boston</div></div><div class="hp"><div class="hl2">Hype</div><div class="hs">★★★★★</div></div></div><div class="wb"><div class="ww">Why Watch</div>Haaland's first-ever World Cup match. Norway have never qualified before. He faces tournament favorites France head-on. Mbappé vs Haaland — two of the three best players in the world on opposite sides. This could be the defining group stage moment of the entire tournament.</div></div>
+  <div class="wc"><div class="wt"><div style="flex:1"><div class="wm"><img class="cf-sm" src="./WC 2026 Primer_files/pt.png" style="vertical-align:middle;margin-right:4px"> Portugal vs Colombia <img class="cf-sm" src="./WC 2026 Primer_files/co.png" style="vertical-align:middle;margin-left:4px"></div><div class="wd">Group K · Arrowhead Stadium, Kansas City</div></div><div class="hp"><div class="hl2">Hype</div><div class="hs">★★★★☆</div></div></div><div class="wb"><div class="ww">Why Watch</div>FIFA #5 vs FIFA #13 — a genuine top-15 clash in the group stage. Ronaldo vs James Rodríguez, two legends. The loser faces an uphill path in arguably the tournament's toughest group.</div></div>
+</div>
+
+<script>
+const FC='https://flagcdn.com/w40/';
+const CODES={Mexico:'mx','South Korea':'kr','South Africa':'za',Czechia:'cz',Canada:'ca',Switzerland:'ch',Qatar:'qa','Bosnia-Herzegovina':'ba',Brazil:'br',Morocco:'ma',Scotland:'gb-sct',Haiti:'ht',USA:'us',Paraguay:'py',Australia:'au','Türkiye':'tr',Germany:'de',Ecuador:'ec','Ivory Coast':'ci','Curaçao':'cw',Netherlands:'nl',Japan:'jp',Tunisia:'tn',Sweden:'se',Belgium:'be',Iran:'ir',Egypt:'eg','New Zealand':'nz',Spain:'es',Uruguay:'uy','Saudi Arabia':'sa','Cape Verde':'cv',France:'fr',Senegal:'sn',Norway:'no',Iraq:'iq',Argentina:'ar',Austria:'at',Algeria:'dz',Jordan:'jo',Portugal:'pt',Colombia:'co',Uzbekistan:'uz','DR Congo':'cd',England:'gb-eng',Croatia:'hr',Panama:'pa',Ghana:'gh'};
+function fi(t,h=15){const c=CODES[t];return c?`<img style="height:${h}px;border-radius:2px;object-fit:cover;vertical-align:middle;display:inline-block" src="${FC}${c}.png" alt="${t}">`:'';}
+
+const GRP=[
+  {id:'A',v:'Mexico City/Zapopan/Monterrey',t:[{n:'Mexico',r:15},{n:'South Korea',r:22},{n:'South Africa',r:65},{n:'Czechia',r:37}]},
+  {id:'B',v:'Toronto/Vancouver/Santa Clara',t:[{n:'Canada',r:27},{n:'Switzerland',r:19},{n:'Qatar',r:58},{n:'Bosnia-Herzegovina',r:60}]},
+  {id:'C',v:'NJ/Boston/Philadelphia',t:[{n:'Brazil',r:6},{n:'Morocco',r:8},{n:'Scotland',r:41},{n:'Haiti',r:88}]},
+  {id:'D',v:'LA/Seattle/SF Bay',usa:true,t:[{n:'USA',r:16,usa:true},{n:'Paraguay',r:62},{n:'Australia',r:24},{n:'Türkiye',r:50}]},
+  {id:'E',v:'Houston/Philly/KC/NJ',t:[{n:'Germany',r:10},{n:'Ecuador',r:44},{n:'Ivory Coast',r:48},{n:'Curaçao',r:82}]},
+  {id:'F',v:'Dallas/Kansas City/LA',t:[{n:'Netherlands',r:7},{n:'Japan',r:18},{n:'Tunisia',r:43},{n:'Sweden',r:29}]},
+  {id:'G',v:'Seattle/Vancouver/Miami',t:[{n:'Belgium',r:9},{n:'Iran',r:23},{n:'Egypt',r:34},{n:'New Zealand',r:97}]},
+  {id:'H',v:'Houston/Guadalajara',t:[{n:'Spain',r:2},{n:'Uruguay',r:17},{n:'Saudi Arabia',r:57},{n:'Cape Verde',r:73}]},
+  {id:'I',v:'Boston/Toronto/Miami',t:[{n:'France',r:1},{n:'Senegal',r:14},{n:'Norway',r:33},{n:'Iraq',r:69}]},
+  {id:'J',v:'Dallas/Miami/Atlanta',t:[{n:'Argentina',r:3},{n:'Austria',r:26},{n:'Algeria',r:52},{n:'Jordan',r:74}]},
+  {id:'K',v:'Kansas City/Dallas/Vancouver',t:[{n:'Portugal',r:5},{n:'Colombia',r:13},{n:'Uzbekistan',r:67},{n:'DR Congo',r:59}]},
+  {id:'L',v:'Atlanta/Philly/Miami',t:[{n:'England',r:4},{n:'Croatia',r:11},{n:'Panama',r:79},{n:'Ghana',r:66}]}
+];
+
+// All 48 group stage matches with sort key (YYYYMMDD + HHMM for ordering)
+const MATCHES_DATA=[
+  // Group A
+  {t1:'Mexico',t2:'South Africa',g:'A',d:'Jun 11',sort:20260611_1500,ti:'3:00 PM ET',v:'Estadio Azteca, Mexico City'},
+  {t1:'South Korea',t2:'Czechia',g:'A',d:'Jun 11',sort:20260611_2200,ti:'10:00 PM ET',v:'Estadio Akron, Zapopan'},
+  {t1:'South Africa',t2:'Czechia',g:'A',d:'Jun 18',sort:20260618_1200,ti:'12:00 PM ET',v:'Mercedes-Benz, Atlanta'},
+  {t1:'Mexico',t2:'South Korea',g:'A',d:'Jun 18',sort:20260618_2100,ti:'9:00 PM ET',v:'Estadio Akron, Zapopan'},
+  {t1:'South Africa',t2:'South Korea',g:'A',d:'Jun 24',sort:20260624_2100,ti:'9:00 PM ET',v:'Estadio BBVA, Monterrey'},
+  {t1:'Mexico',t2:'Czechia',g:'A',d:'Jun 24',sort:20260624_2100,ti:'9:00 PM ET',v:'Estadio Azteca, Mexico City'},
+  // Group B
+  {t1:'Canada',t2:'Bosnia-Herzegovina',g:'B',d:'Jun 12',sort:20260612_1500,ti:'3:00 PM ET',v:'BMO Field, Toronto'},
+  {t1:'Qatar',t2:'Switzerland',g:'B',d:'Jun 13',sort:20260613_1500,ti:'3:00 PM ET',v:'SoFi Stadium, LA'},
+  {t1:'Canada',t2:'Qatar',g:'B',d:'Jun 18',sort:20260618_1800,ti:'6:00 PM ET',v:'BC Place, Vancouver'},
+  {t1:'Switzerland',t2:'Bosnia-Herzegovina',g:'B',d:'Jun 18',sort:20260618_1500,ti:'3:00 PM ET',v:'SoFi Stadium, LA'},
+  {t1:'Canada',t2:'Switzerland',g:'B',d:'Jun 24',sort:20260624_1500,ti:'3:00 PM ET',v:'SoFi Stadium, LA'},
+  {t1:'Bosnia-Herzegovina',t2:'Qatar',g:'B',d:'Jun 24',sort:20260624_1500,ti:'3:00 PM ET',v:'BMO Field, Toronto'},
+  // Group C
+  {t1:'Brazil',t2:'Morocco',g:'C',d:'Jun 13',sort:20260613_1800,ti:'6:00 PM ET',v:'MetLife Stadium, NJ'},
+  {t1:'Scotland',t2:'Haiti',g:'C',d:'Jun 13',sort:20260613_2100,ti:'9:00 PM ET',v:'Gillette Stadium, Boston'},
+  {t1:'Morocco',t2:'Scotland',g:'C',d:'Jun 19',sort:20260619_1800,ti:'6:00 PM ET',v:'Gillette Stadium, Boston'},
+  {t1:'Brazil',t2:'Haiti',g:'C',d:'Jun 20',sort:20260620_2030,ti:'8:30 PM ET',v:'Lincoln Financial, Philadelphia'},
+  {t1:'Brazil',t2:'Scotland',g:'C',d:'Jun 26',sort:20260626_1500,ti:'3:00 PM ET',v:'Gillette Stadium, Boston'},
+  {t1:'Morocco',t2:'Haiti',g:'C',d:'Jun 26',sort:20260626_1800,ti:'6:00 PM ET',v:'Lincoln Financial, Philadelphia'},
+  // Group D (USA)
+  {t1:'USA',t2:'Paraguay',g:'D',d:'Jun 12',sort:20260612_2100,ti:'9:00 PM ET',v:'SoFi Stadium, Inglewood CA',usa:true},
+  {t1:'Australia',t2:'Türkiye',g:'D',d:'Jun 13',sort:20260614_0000,ti:'12:00 AM ET',v:'BC Place, Vancouver'},
+  {t1:'USA',t2:'Australia',g:'D',d:'Jun 19',sort:20260619_1500,ti:'3:00 PM ET',v:'Lumen Field, Seattle',usa:true},
+  {t1:'Türkiye',t2:'Paraguay',g:'D',d:'Jun 19',sort:20260620_0000,ti:'12:00 AM ET',v:"Levi's Stadium, SF Bay"},
+  {t1:'Türkiye',t2:'USA',g:'D',d:'Jun 25',sort:20260625_2200,ti:'10:00 PM ET',v:'SoFi Stadium, Inglewood CA',usa:true},
+  {t1:'Paraguay',t2:'Australia',g:'D',d:'Jun 25',sort:20260625_2200,ti:'10:00 PM ET',v:"Levi's Stadium, SF Bay"},
+  // Group E
+  {t1:'Germany',t2:'Curaçao',g:'E',d:'Jun 14',sort:20260614_1300,ti:'1:00 PM ET',v:'NRG Stadium, Houston'},
+  {t1:'Ecuador',t2:'Ivory Coast',g:'E',d:'Jun 14',sort:20260614_1900,ti:'7:00 PM ET',v:'Lincoln Financial, Philadelphia'},
+  {t1:'Germany',t2:'Ivory Coast',g:'E',d:'Jun 20',sort:20260620_1600,ti:'4:00 PM ET',v:'BMO Field, Toronto'},
+  {t1:'Ecuador',t2:'Curaçao',g:'E',d:'Jun 20',sort:20260620_2000,ti:'8:00 PM ET',v:'Arrowhead Stadium, KC'},
+  {t1:'Ecuador',t2:'Germany',g:'E',d:'Jun 25',sort:20260625_1600,ti:'4:00 PM ET',v:'MetLife Stadium, NJ'},
+  {t1:'Ivory Coast',t2:'Curaçao',g:'E',d:'Jun 25',sort:20260625_1600,ti:'4:00 PM ET',v:'Lincoln Financial, Philadelphia'},
+  // Group F
+  {t1:'Netherlands',t2:'Sweden',g:'F',d:'Jun 15',sort:20260615_1300,ti:'1:00 PM ET',v:'AT&T Stadium, Dallas'},
+  {t1:'Japan',t2:'Tunisia',g:'F',d:'Jun 15',sort:20260615_1900,ti:'7:00 PM ET',v:'Arrowhead Stadium, KC'},
+  {t1:'Netherlands',t2:'Tunisia',g:'F',d:'Jun 21',sort:20260621_1900,ti:'7:00 PM ET',v:'Arrowhead Stadium, KC'},
+  {t1:'Japan',t2:'Sweden',g:'F',d:'Jun 21',sort:20260621_1300,ti:'1:00 PM ET',v:'AT&T Stadium, Dallas'},
+  {t1:'Japan',t2:'Netherlands',g:'F',d:'Jun 25',sort:20260625_1900,ti:'7:00 PM ET',v:'AT&T Stadium, Dallas'},
+  {t1:'Sweden',t2:'Tunisia',g:'F',d:'Jun 26',sort:20260626_1900,ti:'7:00 PM ET',v:'Arrowhead Stadium, KC'},
+  // Group G
+  {t1:'Belgium',t2:'New Zealand',g:'G',d:'Jun 15',sort:20260615_2300,ti:'11:00 PM ET',v:'BC Place, Vancouver'},
+  {t1:'Iran',t2:'Egypt',g:'G',d:'Jun 15',sort:20260615_2000,ti:'8:00 PM ET',v:'Lumen Field, Seattle'},
+  {t1:'Belgium',t2:'Egypt',g:'G',d:'Jun 21',sort:20260621_2300,ti:'11:00 PM ET',v:'Hard Rock, Miami'},
+  {t1:'Iran',t2:'New Zealand',g:'G',d:'Jun 21',sort:20260621_1600,ti:'4:00 PM ET',v:'Hard Rock, Miami'},
+  {t1:'Belgium',t2:'Iran',g:'G',d:'Jun 26',sort:20260626_2300,ti:'11:00 PM ET',v:'Lumen Field, Seattle'},
+  {t1:'Egypt',t2:'New Zealand',g:'G',d:'Jun 26',sort:20260626_1500,ti:'3:00 PM ET',v:'Hard Rock, Miami'},
+  // Group H
+  {t1:'Spain',t2:'Cape Verde',g:'H',d:'Jun 15',sort:20260615_1500,ti:'3:00 PM ET',v:'NRG Stadium, Houston'},
+  {t1:'Uruguay',t2:'Saudi Arabia',g:'H',d:'Jun 15',sort:20260615_2100,ti:'9:00 PM ET',v:'Estadio Akron, Zapopan'},
+  {t1:'Spain',t2:'Saudi Arabia',g:'H',d:'Jun 21',sort:20260621_1500,ti:'3:00 PM ET',v:'NRG Stadium, Houston'},
+  {t1:'Uruguay',t2:'Cape Verde',g:'H',d:'Jun 21',sort:20260621_2100,ti:'9:00 PM ET',v:'Estadio Akron, Zapopan'},
+  {t1:'Uruguay',t2:'Spain',g:'H',d:'Jun 26',sort:20260626_2000,ti:'8:00 PM ET',v:'Estadio Akron, Zapopan'},
+  {t1:'Saudi Arabia',t2:'Cape Verde',g:'H',d:'Jun 26',sort:20260626_2000,ti:'8:00 PM ET',v:'NRG Stadium, Houston'},
+  // Group I
+  {t1:'France',t2:'Senegal',g:'I',d:'Jun 14',sort:20260614_1700,ti:'5:00 PM ET',v:'Hard Rock, Miami'},
+  {t1:'Norway',t2:'Iraq',g:'I',d:'Jun 16',sort:20260616_1400,ti:'2:00 PM ET',v:'Gillette Stadium, Boston'},
+  {t1:'Senegal',t2:'Iraq',g:'I',d:'Jun 20',sort:20260620_1500,ti:'3:00 PM ET',v:'BMO Field, Toronto'},
+  {t1:'France',t2:'Norway',g:'I',d:'Jun 22',sort:20260622_1500,ti:'3:00 PM ET',v:'Gillette Stadium, Boston'},
+  {t1:'France',t2:'Iraq',g:'I',d:'Jun 26',sort:20260626_1500,ti:'3:00 PM ET',v:'BMO Field, Toronto'},
+  {t1:'Senegal',t2:'Norway',g:'I',d:'Jun 26',sort:20260626_1500,ti:'3:00 PM ET',v:'BMO Field, Toronto'},
+  // Group J
+  {t1:'Argentina',t2:'Algeria',g:'J',d:'Jun 16',sort:20260616_2000,ti:'8:00 PM ET',v:'AT&T Stadium, Dallas'},
+  {t1:'Austria',t2:'Jordan',g:'J',d:'Jun 16',sort:20260616_1700,ti:'5:00 PM ET',v:'Hard Rock, Miami'},
+  {t1:'Argentina',t2:'Austria',g:'J',d:'Jun 21',sort:20260621_2000,ti:'8:00 PM ET',v:'Hard Rock, Miami'},
+  {t1:'Algeria',t2:'Jordan',g:'J',d:'Jun 22',sort:20260622_1700,ti:'5:00 PM ET',v:'Mercedes-Benz, Atlanta'},
+  {t1:'Argentina',t2:'Jordan',g:'J',d:'Jun 25',sort:20260625_2000,ti:'8:00 PM ET',v:'Mercedes-Benz, Atlanta'},
+  {t1:'Algeria',t2:'Austria',g:'J',d:'Jun 25',sort:20260625_2000,ti:'8:00 PM ET',v:'Mercedes-Benz, Atlanta'},
+  // Group K
+  {t1:'Portugal',t2:'DR Congo',g:'K',d:'Jun 17',sort:20260617_1700,ti:'5:00 PM ET',v:'Arrowhead Stadium, KC'},
+  {t1:'Colombia',t2:'Uzbekistan',g:'K',d:'Jun 17',sort:20260617_2000,ti:'8:00 PM ET',v:'AT&T Stadium, Dallas'},
+  {t1:'Portugal',t2:'Colombia',g:'K',d:'Jun 23',sort:20260623_2000,ti:'8:00 PM ET',v:'Arrowhead Stadium, KC'},
+  {t1:'DR Congo',t2:'Uzbekistan',g:'K',d:'Jun 22',sort:20260622_2000,ti:'8:00 PM ET',v:'AT&T Stadium, Dallas'},
+  {t1:'Portugal',t2:'Uzbekistan',g:'K',d:'Jun 27',sort:20260627_1500,ti:'3:00 PM ET',v:'BC Place, Vancouver'},
+  {t1:'Colombia',t2:'DR Congo',g:'K',d:'Jun 27',sort:20260627_1800,ti:'6:00 PM ET',v:'BC Place, Vancouver'},
+  // Group L
+  {t1:'England',t2:'Panama',g:'L',d:'Jun 17',sort:20260617_1400,ti:'2:00 PM ET',v:'Mercedes-Benz, Atlanta'},
+  {t1:'Ghana',t2:'Croatia',g:'L',d:'Jun 17',sort:20260617_2100,ti:'9:00 PM ET',v:'Lincoln Financial, Philadelphia'},
+  {t1:'England',t2:'Ghana',g:'L',d:'Jun 22',sort:20260622_1200,ti:'12:00 PM ET',v:'Mercedes-Benz, Atlanta'},
+  {t1:'Croatia',t2:'Panama',g:'L',d:'Jun 22',sort:20260622_1200,ti:'12:00 PM ET',v:'Lincoln Financial, Philadelphia'},
+  {t1:'England',t2:'Croatia',g:'L',d:'Jun 26',sort:20260626_1200,ti:'12:00 PM ET',v:'Mercedes-Benz, Atlanta'},
+  {t1:'Ghana',t2:'Panama',g:'L',d:'Jun 27',sort:20260627_1200,ti:'12:00 PM ET',v:'Lincoln Financial, Philadelphia'}
+];
+
+// Build per-team match lookup
+const TEAM_MATCHES={};
+MATCHES_DATA.forEach(m=>{
+  [m.t1,m.t2].forEach(t=>{if(!TEAM_MATCHES[t])TEAM_MATCHES[t]=[];TEAM_MATCHES[t].push(m);});
+});
+
+function renderGroups(){
+  document.getElementById('gGrid').innerHTML=GRP.map(g=>`<div class="gc ${g.usa?'usa-g':''}">
+    <div class="gh"><span class="gl">Group ${g.id}${g.usa?' ★':''}</span><span class="gn">${g.v.split('/')[0].trim()}</span></div>
+    ${g.t.map((t,i)=>`<div class="gt ${t.usa?'ur':''}" onclick="openModal('${t.n}','${g.id}')">
+      <span class="gs">${i+1}</span>${fi(t.n)}
+      <span class="gtn" ${t.usa?'style="color:#6fa8ff;font-weight:700"':''}>${t.n}</span>
+      <span class="grk">#${t.r}</span><span style="font-size:.55rem;color:var(--muted)">→</span>
+    </div>`).join('')}
+  </div>`).join('');
+}
+
+function openModal(name,grpId){
+  const c=CODES[name]; const gdata=GRP.find(g=>g.id===grpId); const tdata=gdata?.t.find(t=>t.n===name);
+  const matches=(TEAM_MATCHES[name]||[]).sort((a,b)=>a.sort-b.sort);
+  document.getElementById('mflag').src=c?`https://flagcdn.com/w80/${c}.png`:''; document.getElementById('mflag').alt=name;
+  document.getElementById('mcn').textContent=name.toUpperCase();
+  document.getElementById('mcs').textContent=`GROUP ${grpId} · FIFA #${tdata?.r||'?'}`;
+  const gH=matches.map(m=>{const opp=m.t1===name?m.t2:m.t1;const oC=CODES[opp];return`<div class="mgame">
+    <div class="mgt">${fi(name)} ${name} <span style="font-family:'Bebas Neue',cursive;color:var(--muted);padding:0 5px">VS</span> ${oC?`<img style="height:13px;border-radius:1px;object-fit:cover;vertical-align:middle" src="${FC}${oC}.png" alt="${opp}">`:''} ${opp}</div>
+    <div class="mgr"><div class="mgd">${m.d}</div><div class="mgt2">${m.ti}</div><div class="mgv">${m.v}</div></div>
+  </div>`}).join('');
+  document.getElementById('mbody').innerHTML=`<div class="msec">Group Stage Schedule</div>${gH}<div class="mstats"><div class="ms"><div class="msn">Grp ${grpId}</div><div class="msl">Group</div></div><div class="ms"><div class="msn">#${tdata?.r||'?'}</div><div class="msl">FIFA Rank</div></div><div class="ms"><div class="msn">3</div><div class="msl">Games</div></div></div>`;
+  document.getElementById('mo').classList.add('open'); document.body.style.overflow='hidden';
+}
+function closeModal(e){if(!e||e.target===document.getElementById('mo')){document.getElementById('mo').classList.remove('open');document.body.style.overflow='';}}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+let schedFilter='all',schedSearch='';
+function renderSched(){
+  let games=MATCHES_DATA.slice().sort((a,b)=>a.sort-b.sort);
+  if(schedFilter!=='all') games=games.filter(g=>g.g===schedFilter);
+  if(schedSearch) games=games.filter(g=>g.t1.toLowerCase().includes(schedSearch)||g.t2.toLowerCase().includes(schedSearch));
+  const list=document.getElementById('slist'); list.innerHTML='';
+  let lastDay='';
+  games.forEach(m=>{
+    if(m.d!==lastDay){lastDay=m.d;const dh=document.createElement('div');dh.className='sday';dh.textContent=m.d;list.appendChild(dh);}
+    const el=document.createElement('div'); el.className=`sg${m.usa?' sg-usa':''}`;
+    el.onclick=()=>openModal(m.t1,m.g);
+    el.innerHTML=`<div class="sg-left"><div class="sg-match">${fi(m.t1)} <span class="sg-tn">${m.t1}</span> <span class="sg-vs">VS</span> ${fi(m.t2)} <span class="sg-tn">${m.t2}</span></div><div class="sg-info">${m.v}</div></div>
+    <div class="sg-right"><div class="sg-grp">Grp ${m.g}</div><div class="sg-date">${m.d}</div><div class="sg-time">${m.ti}</div></div>`;
+    list.appendChild(el);
+  });
+}
+function filterSched(f,btn){schedFilter=f;document.querySelectorAll('.sbtn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderSched();}
+function searchSched(v){schedSearch=v.toLowerCase();renderSched();}
+
+// FORMATION — Official XI vs Germany June 6 2026 (US Soccer confirmed)
+
+function renderFormation(){
+  // True 4-3-3 based on official US Soccer XI vs Germany June 6 2026
+  const rows=[
+    [{n:'Freese',pos:'GK',num:'24'}],
+    [{n:'Freeman',pos:'RB',num:'16'},{n:'McKenzie',pos:'CB',num:'22'},{n:'Ream',pos:'CB',num:'13',cap:true},{n:'A.Robinson',pos:'LB',num:'5'}],
+    [{n:'Tillman',pos:'CM',num:'17'},{n:'Adams',pos:'DM',num:'4'},{n:'McKennie',pos:'CM',num:'8'}],
+    [{n:'Dest',pos:'RW',num:'2'},{n:'Balogun',pos:'ST',num:'20'},{n:'Pulisic',pos:'LW',num:'10'}]
+  ];
+  document.getElementById('formRows').innerHTML=rows.map(row=>`<div class="f-row">${row.map(p=>`<div class="pnode"><div class="pcirc ${p.cap?'cap':''}"><div class="pnum">${p.num}</div><div class="ppos">${p.pos}</div></div><div class="ptag">${p.n}</div></div>`).join('')}</div>`).join('');
+}
+
+function showTab(tab,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('page-'+tab).classList.add('active');
+  if(el)el.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function updateCd(){
+  const op=new Date('2026-06-11T19:00:00Z'),ua=new Date('2026-06-13T01:00:00Z'),now=new Date();
+  const el=document.getElementById('cd');
+  if(now>=ua){el.textContent='⚽ TOURNAMENT LIVE';return;}
+  if(now>=op){const d=ua-now;const h=Math.floor(d/3600000),m=Math.floor((d%3600000)/60000);el.textContent=`USA OPENER IN ${h}H ${m}M`;return;}
+  const d=op-now;const dy=Math.floor(d/86400000),h=Math.floor((d%86400000)/3600000),m=Math.floor((d%3600000)/60000);
+  el.textContent=`KICKOFF IN ${dy}D ${h}H ${m}M`;
+}
+updateCd(); setInterval(updateCd,30000);
+
+async function fetchNews(){
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:700,system:'You are a sports news editor. Today is June 9 2026, 2 days before the 2026 FIFA World Cup opens. Output ONLY a raw JSON array, no markdown, no backticks, no explanation: [{"h":"headline","b":"body under 20 words"}]. Give exactly 3 items using real current facts: Spain/France co-favorites, USA opens vs Paraguay June 12, Messi/Ronaldo final WC, tournament opens June 11 Mexico vs South Africa, USA lost 2-1 Germany June 6, Ream is USA captain not Pulisic.',messages:[{role:'user',content:'3 World Cup headlines June 9 2026'}]})});
+    const data=await r.json();
+    const raw=(data.content?.find(c=>c.type==='text')?.text||'').replace(/```[\s\S]*?```/g,'').trim();
+    let items;
+    try{items=JSON.parse(raw);}catch{
+      items=[
+        {h:'World Cup opens in 2 days at Estadio Azteca',b:'Mexico vs South Africa kicks off June 11, 3 PM ET.'},
+        {h:'Spain and France share top billing as co-favorites',b:'Spain +450, France +480. Argentina, England, Brazil close behind.'},
+        {h:'USMNT locked in for Paraguay opener Thursday night',b:'Tim Ream captains the side at SoFi Stadium, June 12, 9 PM ET.'}
+      ];
+    }
+    document.getElementById('aiContent').innerHTML=items.map(i=>`<div class="ni"><span class="nd"></span><div><div class="nt">${i.h}</div><div class="nb">${i.b}</div></div></div>`).join('');
+    document.getElementById('aiLoad').style.display='none';
+    document.getElementById('aiContent').style.display='block';
+  }catch{document.getElementById('aiLoad').innerHTML='<span style="color:var(--muted)">Live feed unavailable — check back soon.</span>';}
+}
+
+renderGroups(); renderSched(); renderFormation(); fetchNews();
+setInterval(fetchNews,600000);
+</script>
+
+
+</body></html>
